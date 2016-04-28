@@ -13,7 +13,7 @@ void move() //Just a test. DON'T MESS WITH THIS
 	int c=0, x=0, y=0;
 	for(;;)
 	{
-		switch(c=getch()) //That was annoying me to death figuratively
+		switch(c=getch())
 		{
 		case KEY_UP:
 			x++;    //key up
@@ -28,7 +28,7 @@ void move() //Just a test. DON'T MESS WITH THIS
 			y--;  // key right
 			break;
 		default:
-			cout << endl << "null" << endl;  // not arrow
+			cout << endl << "null" << endl;  // not movement
 			break;
 		}
 	}
