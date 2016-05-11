@@ -10,33 +10,31 @@
 #define KEY_DOWN 115
 #define KEY_LEFT 97
 #define KEY_RIGHT 100
+//Define and add other keys for commands.
 using namespace std;
-void move() //Just a test. DON'T MESS WITH THIS
+void command()
 {
-	int c=0, x=0, y=0;
-	for(;;)
+	int c=0;
+	switch(c=getch())
 	{
-		switch(c=getch())
-		{
-		case KEY_UP:
-			x++;    //key up
-			break;
-		case KEY_DOWN:
-			x--;   // key down
-			break;
-		case KEY_LEFT:
-			y++;  // key left
-			break;
-		case KEY_RIGHT:
-			y--;  // key right
-			break;
-		default:
-			cout << endl << "null" << endl;  // not movement
-			break;
-		}
+	case KEY_UP:
+		up();    //key up
+		break;
+	case KEY_DOWN:
+		down();   // key down
+		break;
+	case KEY_LEFT:
+		left();  // key left
+		break;
+	case KEY_RIGHT:
+		right();  // key right
+		break;
+	default:
+		cout << endl << "Unknown Command. Type 'H' for help" << endl;  // not valid
+		break;
 	}
 }
 int main()
 {
-   move();
+   command();
 }
