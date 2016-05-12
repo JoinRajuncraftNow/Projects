@@ -53,7 +53,7 @@ inv- Inventory of player.
 */
 int main()
 {
-	int killcount, x, y, z, health, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots;
+	int killcount, x, y, z, health, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots, damage;
 	char primary, secondary;
 	string enemy, questline, name, race, inv;
 	while(1)
