@@ -1,4 +1,4 @@
-//All inventory, health, and other stuff.
+using namespace std; //All inventory, health, and other stuff.
 void forward(int& y) //Don't remember if I can do this here, so I will just assume I can until I can test it.
 {
   y++;
