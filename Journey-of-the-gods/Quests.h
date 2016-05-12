@@ -1,1 +1,1 @@
-//All Quest-related stuff
+using namespace std; //All Quest-related stuff
