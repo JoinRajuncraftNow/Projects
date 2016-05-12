@@ -11,7 +11,10 @@
 #define KEY_DOWN 115
 #define KEY_LEFT 97
 #define KEY_RIGHT 100
-#define KEY_RIGHT 100
+#define KEY_R 114
+#define KEY_F 102
+#define KEY_Q 113
+#define KEY_E 101
 //Define and add other keys for commands.
 using namespace std;
 void command()
