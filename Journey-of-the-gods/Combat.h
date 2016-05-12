@@ -1,1 +1,1 @@
-//All combat-related stuff
+using namespace std; //All combat-related stuff
