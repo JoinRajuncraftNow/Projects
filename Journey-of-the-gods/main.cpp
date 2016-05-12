@@ -36,5 +36,10 @@ void command()
 }
 int main()
 {
-   command();
+	int killcount, x, y, z, health, helm, chest, leggings, boots, quest, primary, secondary;
+	string enemy, questline, name, race, inv;
+	while(1)
+	{
+		command();
+	}
 }
