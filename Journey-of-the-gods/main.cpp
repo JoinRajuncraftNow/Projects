@@ -11,6 +11,7 @@
 #define KEY_DOWN 115
 #define KEY_LEFT 97
 #define KEY_RIGHT 100
+#define KEY_RIGHT 100
 //Define and add other keys for commands.
 using namespace std;
 void command()
@@ -49,7 +50,7 @@ inv- Inventory of player.
 */
 int main()
 {
-	int killcount, x, y, z, health, helm, chest, leggings, boots, quest;
+	int killcount, x, y, z, health, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots;
 	char primary, secondary;
 	string enemy, questline, name, race, inv;
 	while(1)
