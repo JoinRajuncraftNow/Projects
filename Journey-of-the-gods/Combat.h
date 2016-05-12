@@ -11,3 +11,7 @@ void combat()
 {
   
 }
+void damage(int& damage, int& health)
+{
+  health-=damage;
+}
