@@ -34,9 +34,22 @@ void command()
 		break;
 	}
 }
+/*
+Variables:
+killcount- Keeps track of how many enemies you have killed. Can be used in quests.
+x, y, z- Keeps track of position of player.
+health- Player health
+helm, chest, leggings, boots- Armor level of differant pieces.
+primary, secondary- Things in your hands.
+enemy- Name of enemy that you are fighting.
+name- Name of player
+race- Race of player. (HINT: Use in dialog!)
+inv- Inventory of player.
+*/
 int main()
 {
-	int killcount, x, y, z, health, helm, chest, leggings, boots, quest, primary, secondary;
+	int killcount, x, y, z, health, helm, chest, leggings, boots, quest;
+	char primary, secondary;
 	string enemy, questline, name, race, inv;
 	while(1)
 	{
