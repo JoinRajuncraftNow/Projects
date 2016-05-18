@@ -50,13 +50,14 @@ enemy- Name of enemy that you are fighting.
 name- Name of player
 race- Race of player. (HINT: Use in dialog!)
 inv- Inventory of player.
+magic- Magic level of the player.
 */
 int main()
 {
 	cout << endl << "What is your name? ";
 	getline(cin, name);
 	cout << "Hello, " << name << " What race will you be?" << endl << "==================================================================" << endl << "1 - Human (Medium strength, agility, and health)" << endl << "2 - Elf (Higher strength, agility, and health. Although, elves cannot use potions to heal themselves)" << endl << "3 - Orc (Very high strength and health, but very low agility)" << endl << "4 - Werecat (Can switch between cat and human forms at will. Very high agility, but low health and attack in cat form)" << endl << "5 - Werewolf (Morphs into a huge beast at night, is a human during the day. In wolf form, very high attack, agility, and health during wolf form. However, you cannot use weapons or wear armor during the night." << endl << "==================================================================" << endl
-	int killcount, x, y, z, health, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots, damage;
+	int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots, damage;
 	char primary, secondary, raceid;
 	string enemy, questline, name, race, inv;
 	while(1)
