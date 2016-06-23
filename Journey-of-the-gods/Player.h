@@ -3,7 +3,7 @@ void forward(int& y) //Don't remember if I can do this here, so I will just assu
 {
   y++;
 }
-void forward(int& y)
+void backward(int& y)
 {
   y--;
 }
