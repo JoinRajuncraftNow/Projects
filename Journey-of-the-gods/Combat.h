@@ -3,6 +3,26 @@ void attack(string name, char raceid, string race, int& z, int& x, int& y, int& 
 {
   
 }
+int adamage(int primary, int secondary, int attacktype)
+{
+  switch(primary)
+  case 1:
+  //Short sword 10-20 base damage
+  break;
+  case 2:
+  //Longsword 20-40 base damage
+  break;
+  case 3:
+  //Club 2-10 base damage
+  break;
+  case 4:
+  //Spear 5-25 base damage
+  break;
+  default: 
+  //Fists 1-5 base damage
+  break;
+  //I think this is how you use switch and stuff, although I have not been over that in a while.
+}
 void death()
 {
   
