@@ -15,6 +15,8 @@
 #define KEY_F 102
 #define KEY_Q 113
 #define KEY_E 101
+int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
+string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 using namespace std;
 void command()
@@ -56,9 +58,38 @@ int main()
 {
 	cout << endl << "What is your name? ";
 	getline(cin, name);
-	cout << "Hello, " << name << " What race will you be?" << endl << "==================================================================" << endl << "1 - Human (Medium strength, agility, and health)" << endl << "2 - Elf (Higher strength, agility, and health. Although, elves cannot use potions to heal themselves)" << endl << "3 - Orc (Very high strength and health, but very low agility)" << endl << "4 - Werecat (Can switch between cat and human forms at will. Very high agility, but low health and attack in cat form)" << endl << "5 - Werewolf (Morphs into a huge beast at night, is a human during the day. In wolf form, very high attack, agility, and health during wolf form. However, you cannot use weapons or wear armor during the night." << endl << "==================================================================" << endl
-	int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
-	string enemy, questline, name, race, inv;
+	int racevar=0;
+	while(racevar=0)
+	{
+		cout << "Hello, " << name << " What race will you be?" << endl << "==================================================================" << endl << "1 - Human (Medium strength, agility, and health.)" << endl << "2 - Elf (Higher strength, agility, and health. Although, elves cannot use potions to heal themselves. They must use magic.)" << endl << "3 - Orc (Very high strength and health, but very low agility.)" << endl << "4 - Dwarf (An ancient miner from a lost race. Low agility, but high attack and defense. You gain a buff over enemies in the dark due to your inherit night vision and keen senses.)" << endl << "5 - Werewolf (Morphs into a huge beast at night, is a human during the day. In wolf form, very high attack, agility, and health during wolf form. However, you cannot use weapons or wear armor during the night.)" << endl << "==================================================================" << endl;
+		cin >> raceid;
+		switch(raceid)
+		{
+		case 1:
+			race=Human;
+			racevar=1;
+			break;
+		case 2:
+			race=Elf;
+			racevar=1;
+			break;
+		case 3:
+			race=Orc;
+			racevar=1;
+			break;
+		case 4:
+			race=Dwarf;
+			racevar=1;
+			break;
+		case 5:
+			race=Werecat;
+			racevar=1;
+			break;
+		default:
+			cout << endl << "Unknown race. Please only input 1-5" << endl;  // not valid
+			break;
+		}
+	}
 	while(1)
 	{
 		command();
