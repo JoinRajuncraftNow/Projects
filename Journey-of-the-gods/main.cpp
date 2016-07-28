@@ -66,23 +66,23 @@ int main()
 		switch(raceid)
 		{
 		case 1:
-			race=Human;
+			race="Human";
 			racevar=1;
 			break;
 		case 2:
-			race=Elf;
+			race="Elf";
 			racevar=1;
 			break;
 		case 3:
-			race=Orc;
+			race="Orc";
 			racevar=1;
 			break;
 		case 4:
-			race=Dwarf;
+			race="Dwarf";
 			racevar=1;
 			break;
 		case 5:
-			race=Werecat;
+			race="Werecat";
 			racevar=1;
 			break;
 		default:
