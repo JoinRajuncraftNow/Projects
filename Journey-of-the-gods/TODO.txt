@@ -6,3 +6,4 @@ Functions:
 3. Inventory addition/subtraction/searching
 4. Movement
 5. Many more, but these are the main ones to focus on right now.
+6. Actually do something. 
