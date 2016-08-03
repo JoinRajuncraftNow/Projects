@@ -66,7 +66,7 @@ int main()
 		switch(raceid)
 		{
 		case 1:
-			race="Human";
+			race="Human"; //I was just testing how much you were paying attention. Totally didn't forget the " or anything.
 			racevar=1;
 			break;
 		case 2:
