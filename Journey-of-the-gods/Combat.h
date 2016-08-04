@@ -8,19 +8,19 @@ int adamage(int primary, int secondary, int attacktype)
   switch(primary)
   {
   case 1:
-    //Short sword 10-20 base damage
+    damage=gen(10, 20);
     break;
   case 2:
-    //Longsword 20-40 base damage
+    damage=gen(20, 40);
     break;
   case 3:
-    //Club 2-10 base damage
+    damage=gen(2, 10);
     break;
   case 4:
-    //Spear 5-25 base damage
+    damage=gen(5, 25);
     break;
   default: 
-    //Fists 1-5 base damage
+    damage=gen(1, 5);
     break;
   }
 }
