@@ -16,6 +16,7 @@
 #define KEY_Q 113
 #define KEY_E 101
 int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
+int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 using namespace std;
