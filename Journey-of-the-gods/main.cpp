@@ -37,6 +37,18 @@ void command()
 	case KEY_RIGHT:
 		right();  // key right
 		break;
+	case KEY_R:
+		r();    //key R
+		break;
+	case KEY_F:
+		f();   // key F
+		break;
+	case KEY_Q:
+		q();  // key Q
+		break;
+	case KEY_E:
+		e();  // key E
+		break;
 	default:
 		cout << endl << "Unknown Command. Type 'H' for help" << endl;  // not valid
 		break;
@@ -95,4 +107,5 @@ int main()
 	{
 		command();
 	}
+	return -1;
 }
