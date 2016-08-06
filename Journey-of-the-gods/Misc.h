@@ -27,3 +27,7 @@ int mapgen()
 	x=0; //y is already 0!
 	z=4;
 }
+extern int x;
+extern int y;
+extern int z;
+extern int map[100][100][5];

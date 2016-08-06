@@ -7,6 +7,7 @@
 #include "Quests.h"
 #include "Player.h"
 #include "Misc.h"
+#define KEY_SPECIAL 224
 #define KEY_UP 119
 #define KEY_DOWN 115
 #define KEY_LEFT 97
@@ -25,6 +26,9 @@ void command()
 	int c=0;
 	switch(c=getch())
 	{
+	case KEY_SPECIAL:
+		command();
+		break;
 	case KEY_UP:
 		up();    //key up
 		break;
