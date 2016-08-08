@@ -1,7 +1,28 @@
 using namespace std; //All combat-related stuff
-void attack()
+void combat()
 {
-  
+  enemyid=gen(1, 5);
+  switch(enemyid)
+  {
+  case 1:
+    enemy="Bandit"
+    break;
+  case 2:
+    enemy="Giant Spider"
+    break;
+  case 3:
+    enemy="Skeleton"
+    break;
+  case 4:
+    enemy="Undead Bandit"
+    break;
+  case 5:
+    enemy="Wolf"
+    break;
+  default: 
+    enemy="LOLOLOLOLOLcgyagryGAYGCYRGYGCYGygrwykqgnywgcifrrqgyoqog4qugyrtfnrygqryg48265gqi4g7BFg"
+    break;
+  }
 }
 
 int adamage()
