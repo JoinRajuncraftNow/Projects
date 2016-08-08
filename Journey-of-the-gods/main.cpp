@@ -16,7 +16,7 @@
 #define KEY_F 102
 #define KEY_Q 113
 #define KEY_E 101
-int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
+int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
@@ -66,6 +66,7 @@ health- Player health
 helm, chest, leggings, boots- Armor level of differant pieces.
 primary, secondary- Things in your hands.
 enemy- Name of enemy that you are fighting.
+enemyid-ID of enemy.
 name- Name of player
 race- Race of player. (HINT: Use in dialog!)
 inv- Inventory of player.
