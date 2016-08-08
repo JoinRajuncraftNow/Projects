@@ -1,5 +1,5 @@
 using namespace std; //All combat-related stuff
-void combat()
+void combat() //This is where the combat will be.
 {
   enemyid=gen(1, 5);
   switch(enemyid)
