@@ -1,4 +1,6 @@
 using namespace std; //All combat-related stuff
+#ifndef COMBAT_H
+#define COMBAT_H
 #include <cstdlib>
 extern int killcount;
 extern int x;
@@ -107,3 +109,4 @@ int vampire() //Deals no damage, but just sucks a small amount of life out of en
   return -1; //Temporary value
 }
 //Going to consult with creative people for more.
+#endif
