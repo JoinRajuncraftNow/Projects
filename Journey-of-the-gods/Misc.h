@@ -1,4 +1,6 @@
 using namespace std; //For misc. functions and stuff.
+#ifndef MISC_H
+#define MISC_H
 extern int killcount;
 extern int x;
 extern int y;
@@ -49,3 +51,4 @@ int mapgen()
 	x=0; //y is already 0!
 	z=4;
 }
+#endif
