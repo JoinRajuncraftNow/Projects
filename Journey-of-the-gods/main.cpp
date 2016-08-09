@@ -3,11 +3,12 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <conio.h>
+#include "conio.h"
 #include "Combat.h"
 #include "Quests.h"
 #include "Player.h"
 #include "Misc.h"
+#define KEY_PRIME -1
 #define KEY_SPECIAL 224
 #define KEY_UP 119
 #define KEY_DOWN 115
@@ -17,20 +18,64 @@
 #define KEY_F 102
 #define KEY_Q 113
 #define KEY_E 101
+#ifdef ZACHLINUX
+#define KEY_SPECIAL '\x1b'
+#define KEY_PRIME '['
+#define KEY_UP 'A'
+#define KEY_DOWN 'B'
+#define KEY_RIGHT 'C'
+#define KEY_LEFT 'D'
+#endif
 int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
+void up(){}void down(){}void left(){}void right(){}void r(){}void f(){}void q(){}void e(){} //Comment this out when you have the functions
 using namespace std;
-void command()
+void command() //overload
+{
+	command(0);
+}
+void command(int test)
 {
 	int c=0;
+	if(test != 0)
+	{
+		#ifdef ZACHLINUX
+		c = getch();
+		if(c != KEY_PRIME)
+		{
+			cout << "Zach, you either typed an invalid key combination, or you pressed escape."
+		}
+		c=getch();
+		switch(c)
+		{
+			case KEY_UP:
+				up();
+				break;
+			case KEY_DOWN:
+				down();
+				break;
+			case KEY_LEFT:
+				left();
+				break;
+			case KEY_RIGHT:
+				right();
+				break;
+			default:
+				cout << "Zach, wrong button!" << endl;
+				break;
+		}
+		return;
+		#endif
+	}
 	switch(c=getch())
 	{
 	case KEY_SPECIAL:
-		command();
+		command(1);
 		break;
+	#ifndef ZACHLINUX
 	case KEY_UP:
 		up();    //key up
 		break;
@@ -43,6 +88,7 @@ void command()
 	case KEY_RIGHT:
 		right();  // key right
 		break;
+	#endif
 	case KEY_R:
 		r();    //key R
 		break;
@@ -81,7 +127,7 @@ int main()
 	int racevar=0;
 	while(racevar==0)
 	{
-		cout << "Hello, " << name << " What race will you be?" << endl << "==================================================================" << endl << "1 - Human (Medium strength, agility, and health.)" << endl << "2 - Elf (Higher strength, agility, and health. Although, elves cannot use potions to heal themselves. They must use magic.)" << endl << "3 - Orc (Very high strength and health, but very low agility.)" << endl << "4 - Dwarf (An ancient miner from a lost race. Low agility, but high attack and defense. You gain a buff over enemies in the dark due to your inherit night vision and keen senses.)" << endl << "5 - Werewolf (Morphs into a huge beast at night, is a human during the day. In wolf form, very high attack, agility, and health during wolf form. However, you cannot use weapons or wear armor during the night.)" << endl << "==================================================================" << endl;
+		cout << "Hello, " << name << "! What race will you be?" << endl << "==================================================================" << endl << "1 - Human (Medium strength, agility, and health.)" << endl << "2 - Elf (Higher strength, agility, and health. Although, elves cannot use potions to heal themselves. They must use magic.)" << endl << "3 - Orc (Very high strength and health, but very low agility.)" << endl << "4 - Dwarf (An ancient miner from a lost race. Low agility, but high attack and defense. You gain a buff over enemies in the dark due to your inherit night vision and keen senses.)" << endl << "5 - Werewolf (Morphs into a huge beast at night, is a human during the day. In wolf form, very high attack, agility, and health during wolf form. However, you cannot use weapons or wear armor during the night.)" << endl << "==================================================================" << endl;
 		cin >> raceid;
 		switch(raceid)
 		{
@@ -102,7 +148,8 @@ int main()
 			racevar=1;
 			break;
 		case 5:
-			race="Werecat";
+			//race="Werecat"; Dude, I am going to mock you with this forever!
+			race="Werewolf"
 			racevar=1;
 			break;
 		default:
@@ -114,5 +161,6 @@ int main()
 	{
 		command();
 	}
-	return -1;
+	cout << "This code should never be executed, SO GO AND FIX THIS!" << endl; //message if there is a specific glitch
+	return 0;
 }
