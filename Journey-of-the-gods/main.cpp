@@ -26,7 +26,7 @@
 #define KEY_RIGHT 'C'
 #define KEY_LEFT 'D'
 #endif
-int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
+int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid; //you already put racevar here
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
@@ -40,10 +40,6 @@ void f(){}
 void q(){}
 void e(){}
 using namespace std;
-void command() //overload
-{
-	command(0);
-}
 void command(int test)
 {
 	int c=0;
@@ -113,6 +109,10 @@ void command(int test)
 		break;
 	}
 }
+void command()
+{
+	command(0);
+}
 /*
 Variables:
 killcount- Keeps track of how many enemies you have killed. Can be used in quests.
@@ -155,8 +155,8 @@ int main()
 			racevar=1;
 			break;
 		case 5:
-			//race="Werecat"; Dude, I am going to annoy you with this forever!
-			race="Werewolf"
+			//race="Werecat"; Dude, I am going to annoy you with this forever! Yeah you forgot it, WERECAT?
+			race="Werewolf";
 			racevar=1;
 			break;
 		default:
