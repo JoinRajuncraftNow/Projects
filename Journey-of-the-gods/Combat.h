@@ -83,7 +83,7 @@ void death()
 {
   //No return -1 for a placeholder, as it is void
 }
-void damage(int& damage, int& health)
+void do_damage(int& damage, int& health) //You can't have a function damage and a variable damage at the same time.
 {
   health-=damage;
 }
