@@ -1,6 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 using namespace std; //All inventory, health, and other stuff.
+#include "headers.h"
 extern int killcount;
 extern int x;
 extern int y;
