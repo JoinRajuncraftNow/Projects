@@ -77,10 +77,11 @@ int adamage()
     damage=gen(1, 5);
     break;
   }
+  return -1;
 }
 void death()
 {
-  return -1;
+  //No return -1 for a placeholder, as it is void
 }
 void damage(int& damage, int& health)
 {
