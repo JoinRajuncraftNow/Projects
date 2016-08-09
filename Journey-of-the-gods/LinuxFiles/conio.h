@@ -1,4 +1,6 @@
+#ifndef ZACHLINUX
 #define ZACHLINUX
+using namespace
 #include <fstream>
 #include <cstdlib>
 #include <vector>
@@ -38,3 +40,4 @@ int getch() //Just in the case that Alex uses getch
 {
 	return key();
 }
+#endif
