@@ -1,6 +1,26 @@
 using namespace std; //All combat-related stuff
-extern killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
-extern map[100][100][5];
+extern int killcount;
+extern int x;
+extern int y;
+extern int z;
+extern int health;
+extern int magic;
+extern int helm;
+extern int chest;
+extern int leggings;
+extern int boots;
+extern int quest;
+extern int enemyid;
+extern int ehealth;
+extern int ehelm;
+extern int echest;
+extern int eleggings;
+extern int eboots;
+extern int damage;
+extern int primary;
+extern int secondary;
+extern int raceid;
+extern int map[100][100][5];
 void combat() //This is where the combat will be.
 {
   enemyid=gen(1, 5);
@@ -31,8 +51,8 @@ void combat() //This is where the combat will be.
     ehealth=1000;
     break;
   default: 
-    enemy="LOLOLOLOLOLcgyagryGAYGCYRGYGCYGygrwykqgnywgcifrrqgyoqog4qugyrtfnrygqryg48265gqi4g7BFg";
-    ehealth=10000000000000000000000000;
+    enemy="Glitch";
+    ehealth=2147483647; //Maximum value for an integer, let's not have it be negative
     break;
   }
 }
@@ -60,7 +80,7 @@ int adamage()
 }
 void death()
 {
-  
+  return -1;
 }
 void damage(int& damage, int& health)
 {
@@ -69,18 +89,18 @@ void damage(int& damage, int& health)
 //Spells:
 int fireball() //Deals medium damage and has a chance of lighting the enemy on fire.
 {
-  
+  return -1;
 }
 int freeze() //Deals medium damage and has a chance of freezing the enemy.
 {
-  
+  return -1;
 }
 int godwrath() //Deals large amounts of damage, but will rebound and damage the caster.
 {
-  
+  return -1; //Temporary value
 }
 int vampire() //Deals no damage, but just sucks a small amount of life out of enemies.
 {
-  
+  return -1; //Temporary value
 }
 //Going to consult with creative people for more.
