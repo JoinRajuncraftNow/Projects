@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 #include <string>
 #include <cstdlib>
 #include <ctime>
@@ -20,6 +21,7 @@ int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enem
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
+//time_t t = time(0); I think this is time, is it?
 using namespace std;
 void command()
 {
