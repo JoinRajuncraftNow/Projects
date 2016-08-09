@@ -1,4 +1,5 @@
 using namespace std; //All combat-related stuff
+#include "Misc.h"
 extern int killcount;
 extern int x;
 extern int y;
@@ -20,6 +21,7 @@ extern int damage;
 extern int primary;
 extern int secondary;
 extern int raceid;
+extern string enemy;
 extern int map[100][100][5];
 void combat() //This is where the combat will be.
 {
