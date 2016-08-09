@@ -1,4 +1,6 @@
 using namespace std; //For misc. functions and stuff.
+extern killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
+extern map[100][100][5];
 int gen(int x, int y) //Generates a random number between x and y.
 {
 	return rand()%(y-x+1)+x;
