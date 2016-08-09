@@ -31,7 +31,14 @@ int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
-void up(){}void down(){}void left(){}void right(){}void r(){}void f(){}void q(){}void e(){} //Comment this out when you have the functions
+void up(){}
+void down(){}
+void left(){}
+void right(){}
+void r(){}
+void f(){}
+void q(){}
+void e(){}
 using namespace std;
 void command() //overload
 {
@@ -46,7 +53,7 @@ void command(int test)
 		c = getch();
 		if(c != KEY_PRIME)
 		{
-			cout << "Zach, you either typed an invalid key combination, or you pressed escape."
+			cout << "Zach, you either typed an invalid key combination, or you pressed escape.";
 		}
 		c=getch();
 		switch(c)
@@ -148,7 +155,7 @@ int main()
 			racevar=1;
 			break;
 		case 5:
-			//race="Werecat"; Dude, I am going to mock you with this forever!
+			//race="Werecat"; Dude, I am going to annoy you with this forever!
 			race="Werewolf"
 			racevar=1;
 			break;
