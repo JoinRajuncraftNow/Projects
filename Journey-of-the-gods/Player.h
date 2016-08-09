@@ -1,3 +1,5 @@
+#ifndef PLAYER_H
+#define PLAYER_H
 using namespace std; //All inventory, health, and other stuff.
 extern int killcount;
 extern int x;
@@ -45,3 +47,4 @@ void down(int& z)
 {
   z--;
 }
+#endif
