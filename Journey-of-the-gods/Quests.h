@@ -1,3 +1,5 @@
+#ifndef QUESTS_H
+#define QUESTS_H
 using namespace std; //All Quest-related stuff
 extern int killcount;
 extern int x;
@@ -21,3 +23,4 @@ extern int primary;
 extern int secondary;
 extern int raceid;
 extern int map[100][100][5];
+#endif
