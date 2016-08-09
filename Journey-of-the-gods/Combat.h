@@ -2,6 +2,7 @@ using namespace std; //All combat-related stuff
 #ifndef COMBAT_H
 #define COMBAT_H
 #include <cstdlib>
+#include "headers.h"
 extern int killcount;
 extern int x;
 extern int y;
