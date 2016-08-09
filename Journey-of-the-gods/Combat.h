@@ -1,5 +1,4 @@
 using namespace std; //All combat-related stuff
-#include "Misc.h"
 #include <cstdlib>
 extern int killcount;
 extern int x;
