@@ -4,25 +4,35 @@ extern map[100][100][5];
 void combat() //This is where the combat will be.
 {
   enemyid=gen(1, 5);
+  ehelm=gen(1, 3); //1 is 0% defence, 2 is 4% defence, and 3 is 10% defence.
+  echest=gen(1, 3);
+  eleggings=gen(1, 3);
+  eboots=gen(1, 3);
   switch(enemyid)
   {
   case 1:
-    enemy="Bandit"
+    enemy="Bandit";
+    ehealth=1000;
     break;
   case 2:
-    enemy="Giant Spider"
+    enemy="Giant Spider";
+    ehealth=2000;
     break;
   case 3:
-    enemy="Skeleton"
+    enemy="Skeleton";
+    ehealth=1000;
     break;
   case 4:
-    enemy="Undead Bandit"
+    enemy="Undead Bandit";
+    ehealth=2000;
     break;
   case 5:
-    enemy="Wolf"
+    enemy="Wolf";
+    ehealth=1000;
     break;
   default: 
-    enemy="LOLOLOLOLOLcgyagryGAYGCYRGYGCYGygrwykqgnywgcifrrqgyoqog4qugyrtfnrygqryg48265gqi4g7BFg"
+    enemy="LOLOLOLOLOLcgyagryGAYGCYRGYGCYGygrwykqgnywgcifrrqgyoqog4qugyrtfnrygqryg48265gqi4g7BFg";
+    ehealth=10000000000000000000000000;
     break;
   }
 }
@@ -49,10 +59,6 @@ int adamage()
   }
 }
 void death()
-{
-  
-}
-void combat()
 {
   
 }
