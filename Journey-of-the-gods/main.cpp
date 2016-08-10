@@ -164,6 +164,7 @@ int main()
 			break;
 		}
 	}
+	cout << endl << "[You chose " << race << "]" << endl;
 	while(1)
 	{
 		command();
