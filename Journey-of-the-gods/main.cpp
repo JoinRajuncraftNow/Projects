@@ -31,14 +31,34 @@ int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
-void up(){}
-void down(){}
-void left(){}
-void right(){}
-void r(){}
-void f(){}
-void q(){}
-void e(){}
+void up()
+{
+	y++;
+}
+void down()
+{
+	y--;
+}
+void left()
+{
+	x--;
+}
+void right()
+{
+	x++;
+}
+void r()
+{
+	z++;
+}
+void f()
+{
+	z--;
+}
+void q()
+{}
+void e()
+{}
 using namespace std;
 void command(int test)
 {
