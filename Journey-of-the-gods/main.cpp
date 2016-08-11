@@ -189,6 +189,10 @@ int main()
 	{
 		command();
 	}
-	cout << "This code should never be executed, SO GO AND FIX THIS!" << endl; //message if there is a specific glitch
+	cout << "iuatraycgygryguyavgxyugfw7q8tfyuegfq6xrfgyngrx8qbt487x	yx7xgrx6ft837t68gf6x8g868t8x6tqg8gnxf6qg8t664t7xgororxv86qrtvgtgr8vgr6tgqvrn6v8nqx6ngv86fgnov68" << endl; //message if there is a specific glitch
+	while(1)
+	{
+		cout << "AAAAHH!!!!!!"
+	}
 	return 0;
 }
