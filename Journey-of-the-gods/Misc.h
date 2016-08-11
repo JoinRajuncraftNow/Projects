@@ -30,7 +30,7 @@ int gen(int x, int y) //Generates a random number between x and y.
 }
 
 //MAP FUNCTIONS
-int mapgen()
+void mapgen()
 {
 	cout << "Generating Map..." << endl; //Randomly generates map.
 	while(x<100)
