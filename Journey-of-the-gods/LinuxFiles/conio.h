@@ -1,6 +1,6 @@
 #ifndef ZACHLINUX
 #define ZACHLINUX
-using namespace
+using namespace std; //How the hell did I not see this?
 #include <fstream>
 #include <cstdlib>
 #include <vector>
