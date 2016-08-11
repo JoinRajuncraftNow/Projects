@@ -1,3 +1,4 @@
+using namespace std; //This might fix it
 #include <iostream>
 #include <ctime>
 #include <string>
@@ -42,7 +43,6 @@ void f()
 void q() {}
 //Do that if the code has nothing in it
 void e() {}
-using namespace std;
 void command(int test)
 {
 	int c=0;
