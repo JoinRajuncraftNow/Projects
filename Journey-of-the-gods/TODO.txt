@@ -4,6 +4,6 @@ Functions:
 1. Combat
 2. Health subtraction/addition
 3. Inventory addition/subtraction/searching
-4. Movement
-5. Many more, but these are the main ones to focus on right now.
-6. Actually do something. 
+4. Race stuff
+5. Other stuff
+6. Make a game
