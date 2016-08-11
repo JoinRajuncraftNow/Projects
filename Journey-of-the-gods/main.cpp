@@ -31,22 +31,6 @@ int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
-void up()
-{
-	y++;
-}
-void down()
-{
-	y--;
-}
-void left()
-{
-	x--;
-}
-void right()
-{
-	x++;
-}
 void r()
 {
 	z++;
@@ -55,10 +39,9 @@ void f()
 {
 	z--;
 }
-void q()
-{}
-void e()
-{}
+void q() {}
+//Do that if the code has nothing in it
+void e() {}
 using namespace std;
 void command(int test)
 {
@@ -75,16 +58,16 @@ void command(int test)
 		switch(c)
 		{
 			case KEY_UP:
-				up();
+				forward(y); //You already defined these commands!!!!!
 				break;
 			case KEY_DOWN:
-				down();
+				backward(y);
 				break;
 			case KEY_LEFT:
-				left();
+				left(x);
 				break;
 			case KEY_RIGHT:
-				right();
+				right(x);
 				break;
 			default:
 				cout << "Zach, wrong button!" << endl;
@@ -100,23 +83,23 @@ void command(int test)
 		break;
 	#ifndef ZACHLINUX
 	case KEY_UP:
-		up();    //key up
+		forward(y);    //key up
 		break;
 	case KEY_DOWN:
-		down();   // key down
+		backward(y);   // key down
 		break;
 	case KEY_LEFT:
-		left();  // key left
+		left(x);  // key left
 		break;
 	case KEY_RIGHT:
-		right();  // key right
+		right(x);  // key right
 		break;
 	#endif
 	case KEY_R:
-		r();    //key R
+		up(z);    //key R
 		break;
 	case KEY_F:
-		f();   // key F
+		down(z);   // key F
 		break;
 	case KEY_Q:
 		q();  // key Q
@@ -125,7 +108,7 @@ void command(int test)
 		e();  // key E
 		break;
 	default:
-		cout << endl << "Unknown Command. Type 'H' for help" << endl;  // not valid
+		cout << endl << "Unknown Command. Type 'H' for help, which is unavailabe currently." << endl;  // not valid
 		break;
 	}
 }
@@ -175,7 +158,6 @@ int main()
 			racevar=1;
 			break;
 		case 5:
-			//race="Werecat"; Dude, I am going to annoy you with this forever! Yeah you forgot it, WERECAT?
 			race="Werewolf";
 			racevar=1;
 			break;
@@ -188,11 +170,6 @@ int main()
 	while(1)
 	{
 		command();
-	}
-	cout << "iuatraycgygryguyavgxyugfw7q8tfyuegfq6xrfgyngrx8qbt487x	yx7xgrx6ft837t68gf6x8g868t8x6tqg8gnxf6qg8t664t7xgororxv86qrtvgtgr8vgr6tgqvrn6v8nqx6ngv86fgnov68" << endl; //message if there is a specific glitch
-	while(1)
-	{
-		cout << "AAAAHH!!!!!!"
 	}
 	return 0;
 }
