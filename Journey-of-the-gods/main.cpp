@@ -50,16 +50,22 @@ void command(int test)
 		switch(c)
 		{
 			case KEY_UP:
-				forward(y); //You already defined these commands!!!!!
+				forward();
 				break;
 			case KEY_DOWN:
-				backward(y);
+				backward();
 				break;
 			case KEY_LEFT:
-				left(x);
+				left();
 				break;
 			case KEY_RIGHT:
-				right(x);
+				right();
+				break;
+			case KEY_R:
+				up();
+				break;
+			case KEY_F:
+				down();
 				break;
 			default:
 				cout << "Zach, wrong button!" << endl;
