@@ -24,27 +24,27 @@ extern int primary;
 extern int secondary;
 extern int raceid;
 extern int map[100][100][5];
-void forward(int& y) //Don't remember if I can do this here, so I will just assume I can until I can test it.
+void forward() //Don't remember if I can do this here, so I will just assume I can until I can test it.
 {
   y++;
 }
-void backward(int& y)
+void backward()
 {
   y--;
 }
-void left(int& x)
+void left()
 {
   x--;
 }
-void right(int& x)
+void right()
 {
   x++;
 }
-void up(int& z)
+void up()
 {
   z++;
 }
-void down(int& z)
+void down()
 {
   z--;
 }
