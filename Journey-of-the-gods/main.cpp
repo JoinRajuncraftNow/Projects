@@ -38,7 +38,7 @@ void e() {}
 void command(int test)
 {
 	int c=0;
-	if(test != 0)
+	if(test != 0) //This is a test for Arrow Keys on Linux, AKA, don't mess with this.
 	{
 		#ifdef ZACHLINUX
 		c = getch();
@@ -60,12 +60,6 @@ void command(int test)
 				break;
 			case KEY_RIGHT:
 				right();
-				break;
-			case KEY_R:
-				up();
-				break;
-			case KEY_F:
-				down();
 				break;
 			default:
 				cout << "Zach, wrong button!" << endl;
