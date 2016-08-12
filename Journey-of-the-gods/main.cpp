@@ -75,23 +75,23 @@ void command(int test)
 		break;
 	#ifndef ZACHLINUX
 	case KEY_UP:
-		forward(y);    //key up
+		forward();    //key up
 		break;
 	case KEY_DOWN:
-		backward(y);   // key down
+		backward();   // key down
 		break;
 	case KEY_LEFT:
-		left(x);  // key left
+		left();  // key left
 		break;
 	case KEY_RIGHT:
-		right(x);  // key right
+		right();  // key right
 		break;
 	#endif
 	case KEY_R:
-		up(z);    //key R
+		up();    //key R
 		break;
 	case KEY_F:
-		down(z);   // key F
+		down();   // key F
 		break;
 	case KEY_Q:
 		q();  // key Q
