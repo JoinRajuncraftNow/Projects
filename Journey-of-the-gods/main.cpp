@@ -27,19 +27,11 @@ using namespace std; //This might fix it
 #define KEY_RIGHT 'C'
 #define KEY_LEFT 'D'
 #endif
-int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid; //you already put racevar here
+int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
-void r()
-{
-	z++;
-}
-void f()
-{
-	z--;
-}
 void q() {}
 //Do that if the code has nothing in it
 void e() {}
