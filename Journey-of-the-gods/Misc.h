@@ -39,7 +39,7 @@ void mapgen()
 		{
 			while(z<5)
 			{
-				map[x][y][z]=gen(1,10);
+				map[x][y][z]=gen(1,50); //Think of all the possibilities! At the current rate, I will be done with this game in... 10 years! 
 				z++;
 			}
 			y++;
