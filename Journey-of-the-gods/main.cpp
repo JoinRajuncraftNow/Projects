@@ -11,11 +11,10 @@ using namespace std; //This might fix it
 #include "Misc.h"
 #define KEY_PRIME -1
 #define KEY_SPECIAL 224
-//Not sure why you had the wrong characters...
-#define KEY_UP 72
-#define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
+#define KEY_UP 119
+#define KEY_DOWN 115
+#define KEY_LEFT 97
+#define KEY_RIGHT 100
 #define KEY_R 114
 #define KEY_F 102
 #define KEY_Q 113
