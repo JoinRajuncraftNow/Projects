@@ -9,7 +9,6 @@ using namespace std; //This might fix it
 #include "Quests.h"
 #include "Player.h"
 #include "Misc.h"
-//Not sure why you had the wrong characters...
 int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
