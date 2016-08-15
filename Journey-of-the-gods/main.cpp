@@ -9,24 +9,7 @@ using namespace std; //This might fix it
 #include "Quests.h"
 #include "Player.h"
 #include "Misc.h"
-#define KEY_PRIME -1
-#define KEY_SPECIAL 224
-#define KEY_UP 119
-#define KEY_DOWN 115
-#define KEY_LEFT 97
-#define KEY_RIGHT 100
-#define KEY_R 114
-#define KEY_F 102
-#define KEY_Q 113
-#define KEY_E 101
-#ifdef ZACHLINUX
-#define KEY_SPECIAL '\x1b'
-#define KEY_PRIME '['
-#define KEY_UP 'A'
-#define KEY_DOWN 'B'
-#define KEY_RIGHT 'C'
-#define KEY_LEFT 'D'
-#endif
+//Not sure why you had the wrong characters...
 int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
@@ -35,78 +18,39 @@ string enemy, questline, name, race, inv; //I hope this works.
 void q() {}
 //Do that if the code has nothing in it
 void e() {}
-void command(int test)
+void command()
 {
-	int c=0;
-	if(test != 0) //This is a test for Arrow Keys on Linux, AKA, don't mess with this.
+	char c;
+	switch(c=(char)getch())
 	{
-		#ifdef ZACHLINUX
-		c = getch();
-		if(c != KEY_PRIME)
-		{
-			cout << "Zach, you either typed an invalid key combination, or you pressed escape.";
-		}
-		c=getch();
-		switch(c)
-		{
-			case KEY_UP:
-				forward();
-				break;
-			case KEY_DOWN:
-				backward();
-				break;
-			case KEY_LEFT:
-				left();
-				break;
-			case KEY_RIGHT:
-				right();
-				break;
-			default:
-				cout << "Zach, wrong button!" << endl;
-				break;
-		}
-		return;
-		#endif
-	}
-	switch(c=getch())
-	{
-	case KEY_SPECIAL:
-		command(1);
+	case 'w':
+		forward();    //key up (W)
 		break;
-	#ifndef ZACHLINUX
-	case KEY_UP:
-		forward();    //key up
+	case 's':
+		backward();   // key down (S)
 		break;
-	case KEY_DOWN:
-		backward();   // key down
+	case 'a':
+		left();  // key left (A)
 		break;
-	case KEY_LEFT:
-		left();  // key left
+	case 'd':
+		right();  // key right (D)
 		break;
-	case KEY_RIGHT:
-		right();  // key right
-		break;
-	#endif
-	case KEY_R:
+	case 'r':
 		up();    //key R
 		break;
-	case KEY_F:
+	case 'f':
 		down();   // key F
 		break;
-	case KEY_Q:
+	case 'q':
 		q();  // key Q
 		break;
-	case KEY_E:
+	case 'e':
 		e();  // key E
 		break;
 	default:
 		cout << endl << "Unknown Command. Type 'H' for help, which is unavailable currently." << endl;  // not valid
 		break;
 	}
-}
-void command()
-{
-	command(0);
 }
 /*
 Variables:
