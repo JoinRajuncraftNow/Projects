@@ -101,7 +101,7 @@ void command(int test)
 		e();  // key E
 		break;
 	default:
-		cout << endl << "Unknown Command. Type 'H' for help, which is unavailabe currently." << endl;  // not valid
+		cout << endl << "Unknown Command. Type 'H' for help, which is unavailable currently." << endl;  // not valid
 		break;
 	}
 }
