@@ -52,4 +52,166 @@ void mapgen()
 	x=0; //y is already 0!
 	z=4;
 }
+void tile()
+{
+	switch(map[x][y][z])
+	{
+	case 1:
+		//stuff
+		break;
+	case 2:
+		//stuff
+		break;
+	case 3:
+		//stuff
+		break;
+	case 4:
+		//stuff
+		break;
+	case 5:
+		//stuff
+		break;
+	case 6:
+		//stuff
+		break;
+	case 7:
+		//stuff
+		break;
+	case 8:
+		//stuff
+		break;
+	case 9:
+		//stuff
+		break;
+	case 10:
+		//stuff
+		break;
+	case 11:
+		//stuff
+		break;
+	case 12;
+		//stuff
+		break;
+	case 13:
+		//stuff
+		break;
+	case 14:
+		//stuff
+		break;
+	case 15:
+		//stuff
+		break;
+	case 16:
+		//stuff
+		break;
+	case 17:
+		//stuff
+		break;
+	case 18:
+		//stuff
+		break;
+	case 19:
+		//stuff
+		break;
+	case 20:
+		//stuff
+		break;
+	case 21:
+		//stuff
+		break;
+	case 22:
+		//stuff
+		break;
+	case 23:
+		//stuff
+		break;
+	case 24:
+		//stuff
+		break;
+	case 25:
+		//stuff
+		break;
+	case 26:
+		//stuff
+		break;
+	case 27:
+		//stuff
+		break;
+	case 28:
+		//stuff
+		break;
+	case 29:
+		//stuff
+		break;
+	case 30:
+		//stuff
+		break;
+	case 31:
+		//stuff
+		break;
+	case 32:
+		//stuff
+		break;
+	case 33:
+		//stuff
+		break;
+	case 34:
+		//stuff
+		break;
+	case 35:
+		//stuff
+		break;
+	case 36:
+		//stuff
+		break;
+	case 37:
+		//stuff
+		break;
+	case 38:
+		//stuff
+		break;
+	case 39:
+		//stuff
+		break;
+	case 40:
+		//stuff
+		break;
+	case 41:
+		//stuff
+		break;
+	case 42:
+		//stuff
+		break;
+	case 43:
+		//stuff
+		break;
+	case 44:
+		//stuff
+		break;
+	case 45:
+		//stuff
+		break;
+	case 46:
+		//stuff
+		break;
+	case 47:
+		//stuff
+		break;
+	case 48:
+		//stuff
+		break;
+	case 49:
+		//stuff
+		break;
+	case 50:
+		//stuff
+		break;
+	default:
+		while(1)
+		{
+			cout << "YOU GOT OUT OF THE MATRIX, AHHHH!";
+		}
+		break;
+	}
+}
 #endif
