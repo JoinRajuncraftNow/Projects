@@ -39,7 +39,7 @@ void mapgen()
 		{
 			while(z<5)
 			{
-				map[x][y][z]=gen(1,50); //Think of all the possibilities! At the current rate, I will be done with this game in... 10 years! 
+				map[x][y][z]=gen(1,50); 
 				z++;
 			}
 			y++;
@@ -55,39 +55,39 @@ void mapgen()
 void tile()
 {
 	/*
-	Tiles: Ima tweak the tile generation. For example, I will make clearings have to be surrounded by forests. It shouldn't be too hard.
+	Think we could make actual realistic map generation? It would take some thinking, but I think we could do it. Especially at this small of a scale.
 	*/
 	switch(map[x][y][z])
 	{
 	case 1:
-		//stuff
+		//forest
 		break;
 	case 2:
-		//stuff
+		//clearing
 		break;
 	case 3:
-		//stuff
+		//mountains
 		break;
 	case 4:
-		//stuff
+		//hills
 		break;
 	case 5:
-		//stuff
+		//plains
 		break;
 	case 6:
-		//stuff
+		//river
 		break;
 	case 7:
-		//stuff
+		//city (may make you able to enter city.)
 		break;
 	case 8:
-		//stuff
+		//cottage
 		break;
 	case 9:
-		//stuff
+		//swamp
 		break;
 	case 10:
-		//stuff
+		//ocean
 		break;
 	case 11:
 		//stuff
