@@ -87,7 +87,7 @@ void tile()
 		//swamp
 		break;
 	case 10:
-		//ocean
+		//lake
 		break;
 	case 11:
 		//stuff
