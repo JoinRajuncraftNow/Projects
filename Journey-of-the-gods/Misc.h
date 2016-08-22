@@ -54,6 +54,9 @@ void mapgen()
 }
 void tile()
 {
+	/*
+	Tiles: Ima tweak the tile generation. For example, I will make clearings have to be surrounded by forests. It shouldn't be too hard.
+	*/
 	switch(map[x][y][z])
 	{
 	case 1:
