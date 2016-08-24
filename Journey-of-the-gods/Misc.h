@@ -23,7 +23,7 @@ extern int damage;
 extern int primary;
 extern int secondary;
 extern int raceid;
-extern int map[100][100][5];
+extern int map[1000][1000][5];
 int gen(int x, int y) //Generates a random number between x and y.
 {
 	return rand()%(y-x+1)+x;
@@ -33,22 +33,86 @@ int gen(int x, int y) //Generates a random number between x and y.
 void mapgen()
 {
 	cout << "Generating Map..." << endl; //Randomly generates map.
-	while(x<100)
+	x=0;
+	y=0;
+	z=4;
+	map[x][y][z]=gen(1,6);
+	while(z<5)
 	{
-		while(y<100)
+		while(y<1000)
 		{
-			while(z<5)
+			while(x<1000)
 			{
-				map[x][y][z]=gen(1,50); 
-				z++;
+				if(y>0)
+				{
+					if(map[x][y-1][z]=1)
+					{
+						map[x][y][z]=gen(1,2);	
+					}
+					if(map[x][y-1][z]=2)
+					{
+						map[x][y][z]=gen(1,3);	
+					}
+					if(map[x][y-1][z]=3)
+					{
+						map[x][y][z]=gen(2,4);	
+					}
+					if(map[x][y-1][z]=4)
+					{
+						map[x][y][z]=gen(3,5);	
+					}
+					if(map[x][y-1][z]=5)
+					{
+						map[x][y][z]=gen(4,6);	
+					}
+					if(map[x][y-1][z]=6)
+					{
+						map[x][y][z]=gen(5,7);	
+						if(map[x][y-1][z]=7)
+						{
+							map[x][y][z]=3;	
+						}
+					}
+				}else{
+					if(map[x-1][y][z]=1)
+					{
+						map[x][y][z]=gen(1,2);	
+					}
+					if(map[x-1][y][z]=2)
+					{
+						map[x][y][z]=gen(1,3);	
+					}
+					if(map[x-1][y][z]=3)
+					{
+						map[x][y][z]=gen(2,4);	
+					}
+					if(map[x-1][y][z]=4)
+					{
+						map[x][y][z]=gen(3,5);	
+					}
+					if(map[x-1][y][z]=5)
+					{
+						map[x][y][z]=gen(4,6);	
+					}
+					if(map[x-1][y][z]=6)
+					{
+						map[x][y][z]=gen(5,7);	
+						if(map[x-1][y][z]=7)
+						{
+							map[x][y][z]=3;	
+						}
+					}	
+				}
+				x++;
+				cout << endl;
 			}
 			y++;
-			z=0;
+			x=0;
 		}
-		x++;
 		y=0;
+		z++;
 	}
-	map[99][99][0]=11;
+	map[999][999][0]=50;
 	x=0; //y is already 0!
 	z=4;
 }
@@ -60,34 +124,34 @@ void tile()
 	switch(map[x][y][z])
 	{
 	case 1:
-		//forest
+		cout << "#"; //forest
 		break;
 	case 2:
-		//clearing
+		cout << "$"; //clearing
 		break;
 	case 3:
-		//mountains
+		cout << "%"; //plains
 		break;
 	case 4:
-		//hills
+		cout << "@"; //hills
 		break;
 	case 5:
-		//plains
+		cout << "^"; //mountains
 		break;
 	case 6:
-		//river
+		cout << "&"; //desert
 		break;
 	case 7:
-		//city (may make you able to enter city.)
+		//plains
 		break;
 	case 8:
-		//cottage
+		//city
 		break;
 	case 9:
-		//swamp
+		//town
 		break;
 	case 10:
-		//lake
+		//settlement
 		break;
 	case 11:
 		//stuff
