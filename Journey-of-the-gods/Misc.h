@@ -30,93 +30,6 @@ int gen(int x, int y) //Generates a random number between x and y.
 }
 
 //MAP FUNCTIONS
-void mapgen()
-{
-	cout << "Generating Map..." << endl; //Randomly generates map.
-	x=0;
-	y=0;
-	z=4;
-	map[x][y][z]=gen(1,6);
-	while(z<3)
-	{
-		while(y<200)
-		{
-			while(x<200)
-			{
-				if(y>0)
-				{
-					if(map[x][y-1][z]=1)
-					{
-						map[x][y][z]=gen(1,2);	
-					}
-					if(map[x][y-1][z]=2)
-					{
-						map[x][y][z]=gen(1,3);	
-					}
-					if(map[x][y-1][z]=3)
-					{
-						map[x][y][z]=gen(2,4);	
-					}
-					if(map[x][y-1][z]=4)
-					{
-						map[x][y][z]=gen(3,5);	
-					}
-					if(map[x][y-1][z]=5)
-					{
-						map[x][y][z]=gen(4,6);	
-					}
-					if(map[x][y-1][z]=6)
-					{
-						map[x][y][z]=gen(5,7);	
-						if(map[x][y-1][z]=7)
-						{
-							map[x][y][z]=3;	
-						}
-					}
-				}else{
-					if(map[x-1][y][z]=1)
-					{
-						map[x][y][z]=gen(1,2);	
-					}
-					if(map[x-1][y][z]=2)
-					{
-						map[x][y][z]=gen(1,3);	
-					}
-					if(map[x-1][y][z]=3)
-					{
-						map[x][y][z]=gen(2,4);	
-					}
-					if(map[x-1][y][z]=4)
-					{
-						map[x][y][z]=gen(3,5);	
-					}
-					if(map[x-1][y][z]=5)
-					{
-						map[x][y][z]=gen(4,6);	
-					}
-					if(map[x-1][y][z]=6)
-					{
-						map[x][y][z]=gen(5,7);	
-						if(map[x-1][y][z]=7)
-						{
-							map[x][y][z]=3;	
-						}
-					}	
-					tile();
-				}
-				x++;
-				cout << endl;
-			}
-			y++;
-			x=0;
-		}
-		y=0;
-		z++;
-	}
-	map[199][199][2]=50;
-	x=0; //y is already 0!
-	z=2;
-}
 void tile()
 {
 	/*
@@ -281,5 +194,92 @@ void tile()
 		}
 		break;
 	}
+}
+void mapgen()
+{
+	cout << "Generating Map..." << endl; //Randomly generates map.
+	x=0;
+	y=0;
+	z=4;
+	map[x][y][z]=gen(1,6);
+	while(z<3)
+	{
+		while(y<200)
+		{
+			while(x<200)
+			{
+				if(y>0)
+				{
+					if(map[x][y-1][z]=1)
+					{
+						map[x][y][z]=gen(1,2);	
+					}
+					if(map[x][y-1][z]=2)
+					{
+						map[x][y][z]=gen(1,3);	
+					}
+					if(map[x][y-1][z]=3)
+					{
+						map[x][y][z]=gen(2,4);	
+					}
+					if(map[x][y-1][z]=4)
+					{
+						map[x][y][z]=gen(3,5);	
+					}
+					if(map[x][y-1][z]=5)
+					{
+						map[x][y][z]=gen(4,6);	
+					}
+					if(map[x][y-1][z]=6)
+					{
+						map[x][y][z]=gen(5,7);	
+						if(map[x][y-1][z]=7)
+						{
+							map[x][y][z]=3;	
+						}
+					}
+				}else{
+					if(map[x-1][y][z]=1)
+					{
+						map[x][y][z]=gen(1,2);	
+					}
+					if(map[x-1][y][z]=2)
+					{
+						map[x][y][z]=gen(1,3);	
+					}
+					if(map[x-1][y][z]=3)
+					{
+						map[x][y][z]=gen(2,4);	
+					}
+					if(map[x-1][y][z]=4)
+					{
+						map[x][y][z]=gen(3,5);	
+					}
+					if(map[x-1][y][z]=5)
+					{
+						map[x][y][z]=gen(4,6);	
+					}
+					if(map[x-1][y][z]=6)
+					{
+						map[x][y][z]=gen(5,7);	
+						if(map[x-1][y][z]=7)
+						{
+							map[x][y][z]=3;	
+						}
+					}	
+					tile();
+				}
+				x++;
+				cout << endl;
+			}
+			y++;
+			x=0;
+		}
+		y=0;
+		z++;
+	}
+	map[199][199][2]=50;
+	x=0; //y is already 0!
+	z=2;
 }
 #endif
