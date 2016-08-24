@@ -23,13 +23,35 @@ extern int damage;
 extern int primary;
 extern int secondary;
 extern int raceid;
-extern int map[200][200][3]; //that might just be a LITTLE too big.
-int gen(int d, int g) //Generates a random number between x and y.
+extern int map[100][100][5];
+int gen(int x_, int y_) //Generates a random number between x and y.
 {
-	return rand()%(g-d+1)+d; //OUTPUTS ONLY 6!!! WTF
+	return rand()%(y_-x_+1)+x_;
 }
 
 //MAP FUNCTIONS
+void mapgen()
+{
+	cout << "Generating Map..." << endl; //Randomly generates map.
+	while(x<100)
+	{
+		while(y<100)
+		{
+			while(z<5)
+			{
+				map[x][y][z]=gen(1,50); 
+				z++;
+			}
+			y++;
+			z=0;
+		}
+		x++;
+		y=0;
+	}
+	map[99][99][0]=11;
+	x=0; //y is already 0!
+	z=4;
+}
 void tile()
 {
 	/*
@@ -38,39 +60,39 @@ void tile()
 	switch(map[x][y][z])
 	{
 	case 1:
-		cout << "#"; //forest
+		//forest
 		break;
 	case 2:
-		cout << "$"; //clearing
+		//clearing
 		break;
 	case 3:
-		cout << "?"; //plains
+		//mountains
 		break;
 	case 4:
-		cout << "@"; //hills
+		//hills
 		break;
 	case 5:
-		cout << "^"; //mountains
-		break;
-	case 6:
-		cout << "&"; //desert
-		break;
-	case 7:
 		//plains
 		break;
+	case 6:
+		//river
+		break;
+	case 7:
+		//city (may make you able to enter city.)
+		break;
 	case 8:
-		//city
+		//cottage
 		break;
 	case 9:
-		//town
+		//swamp
 		break;
 	case 10:
-		//settlement
+		//lake
 		break;
 	case 11:
 		//stuff
 		break;
-	case 12:
+	case 12;
 		//stuff
 		break;
 	case 13:
@@ -194,100 +216,5 @@ void tile()
 		}
 		break;
 	}
-}
-void mapgen()
-{
-	int prevy=0, prevx=0;
-	cout << "Generating Map..." << endl;
-	x=0;
-	y=0;
-	z=3; //I WANT TO KILL MYSELF RIGHT NOW
-	while(1)
-	{
-		map[x][y][z]=gen(1,6);
-		cout << map[x][y][z];
-	}
-	x++;
-	/*while(z>0)
-	{*/
-		while(y<200)//LOL it outputs nothing but ?'s'
-		{
-			while(x<200)
-			{
-				prevy=y-1;
-				prevx=x-1;
-				if(y>0)
-				{
-					if(map[x][prevy][z]=1)
-					{
-						map[x][y][z]=gen(1,2);	
-					}
-					if(map[x][prevy][z]=2)
-					{
-						map[x][y][z]=gen(1,3);	
-					}
-					if(map[x][prevy][z]=3)
-					{
-						map[x][y][z]=gen(2,4);	
-					}
-					if(map[x][prevy][z]=4)
-					{
-						map[x][y][z]=gen(3,5);	
-					}
-					if(map[x][prevy][z]=5)
-					{
-						map[x][y][z]=gen(4,6);	
-					}
-					if(map[x][prevy][z]=6)
-					{
-						map[x][y][z]=gen(5,7);	
-						if(map[x][y-1][z]=7)
-						{
-							map[x][y][z]=3;	
-						}
-					}
-				}else{
-					if(map[prevx][y][z]=1)
-					{
-						map[x][y][z]=gen(1,2);	
-					}
-					if(map[prevx][y][z]=2)
-					{
-						map[x][y][z]=gen(1,3);	
-					}
-					if(map[prevx][y][z]=3)
-					{
-						map[x][y][z]=gen(2,4);	
-					}
-					if(map[prevx][y][z]=4)
-					{
-						map[x][y][z]=gen(3,5);	
-					}
-					if(map[prevx][y][z]=5)
-					{
-						map[x][y][z]=gen(4,6);	
-					}
-					if(map[prevx][y][z]=6)
-					{
-						map[x][y][z]=gen(5,7);	
-						if(map[x][y][z]=7)
-						{
-							map[x][y][z]=3;	
-						}
-					}	
-				}
-				tile();
-				x++;
-			}
-			y++;
-			x=0;
-			cout << endl;
-		}
-		y=0;
-		/*z--;
-	}*/
-	map[199][199][2]=50;
-	x=0; //y is already 0!
-	z=2;
 }
 #endif
