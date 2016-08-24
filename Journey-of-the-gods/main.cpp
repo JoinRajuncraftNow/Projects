@@ -4,7 +4,6 @@ using namespace std; //This might fix it
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <windows.h> //wrong one!
 #include "conio.h"
 #include "Combat.h"
 #include "Quests.h"
@@ -103,6 +102,7 @@ int main()
 		}
 	}
 	cout << endl << "[You chose " << race << "]" << endl;
+	mapgen();
 	while(1)
 	{
 		command();
