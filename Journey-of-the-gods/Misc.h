@@ -197,6 +197,7 @@ void tile()
 }
 void mapgen()
 {
+	int prevy=0, prevx=0;
 	cout << "Generating Map..." << endl;
 	x=0;
 	y=0;
