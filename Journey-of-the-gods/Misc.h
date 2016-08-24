@@ -270,10 +270,10 @@ void mapgen()
 					tile();
 				}
 				x++;
-				cout << endl;
 			}
 			y++;
 			x=0;
+			cout << endl;
 		}
 		y=0;
 		z++;
