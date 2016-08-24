@@ -103,6 +103,7 @@ void mapgen()
 						}
 					}	
 				}
+				tile();
 				x++;
 				cout << endl;
 			}
