@@ -267,8 +267,8 @@ void mapgen()
 							map[x][y][z]=3;	
 						}
 					}	
-					tile();
 				}
+				tile();
 				x++;
 			}
 			y++;
