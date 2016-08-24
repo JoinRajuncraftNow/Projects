@@ -206,7 +206,7 @@ void mapgen()
 	x++;
 	/*while(z>0)
 	{*/
-		while(y<200)
+		while(y<200)//LOL it outputs nothing but ?'s'
 		{
 			while(x<200)
 			{
@@ -266,7 +266,7 @@ void mapgen()
 					if(map[prevx][y][z]=6)
 					{
 						map[x][y][z]=gen(5,7);	
-						if(map[x-1][y][z]=7)
+						if(map[x][y][z]=7)
 						{
 							map[x][y][z]=3;	
 						}
