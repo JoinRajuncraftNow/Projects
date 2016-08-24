@@ -92,7 +92,7 @@ void tile()
 	case 11:
 		//stuff
 		break;
-	case 12;
+	case 12:
 		//stuff
 		break;
 	case 13:
