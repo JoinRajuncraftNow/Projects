@@ -197,13 +197,13 @@ void tile()
 }
 void mapgen()
 {
-	cout << "Generating Map..." << endl; //Randomly generates map.
+	cout << "Generating Map..." << endl;
 	x=0;
 	y=0;
-	z=4;
+	z=3; //I WANT TO KILL MYSELF RIGHT NOW
 	map[x][y][z]=gen(1,6);
-	while(z<3)
-	{
+	/*while(z>0)
+	{*/
 		while(y<200)
 		{
 			while(x<200)
@@ -277,8 +277,8 @@ void mapgen()
 			cout << endl;
 		}
 		y=0;
-		z++;
-	}
+		/*z--;
+	}*/
 	map[199][199][2]=50;
 	x=0; //y is already 0!
 	z=2;
