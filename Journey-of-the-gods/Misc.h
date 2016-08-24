@@ -208,30 +208,32 @@ void mapgen()
 		{
 			while(x<200)
 			{
+				prevy=y-1;
+				prevx=x-1;
 				cout << "TEST";
 				if(y>0)
 				{
-					if(map[x][y-1][z]=1)
+					if(map[x][prevy][z]=1)
 					{
 						map[x][y][z]=gen(1,2);	
 					}
-					if(map[x][y-1][z]=2)
+					if(map[x][prevy][z]=2)
 					{
 						map[x][y][z]=gen(1,3);	
 					}
-					if(map[x][y-1][z]=3)
+					if(map[x][prevy][z]=3)
 					{
 						map[x][y][z]=gen(2,4);	
 					}
-					if(map[x][y-1][z]=4)
+					if(map[x][prevy][z]=4)
 					{
 						map[x][y][z]=gen(3,5);	
 					}
-					if(map[x][y-1][z]=5)
+					if(map[x][prevy][z]=5)
 					{
 						map[x][y][z]=gen(4,6);	
 					}
-					if(map[x][y-1][z]=6)
+					if(map[x][prevy][z]=6)
 					{
 						map[x][y][z]=gen(5,7);	
 						if(map[x][y-1][z]=7)
@@ -240,27 +242,27 @@ void mapgen()
 						}
 					}
 				}else{
-					if(map[x-1][y][z]=1)
+					if(map[prevx][y][z]=1)
 					{
 						map[x][y][z]=gen(1,2);	
 					}
-					if(map[x-1][y][z]=2)
+					if(map[prevx][y][z]=2)
 					{
 						map[x][y][z]=gen(1,3);	
 					}
-					if(map[x-1][y][z]=3)
+					if(map[prevx][y][z]=3)
 					{
 						map[x][y][z]=gen(2,4);	
 					}
-					if(map[x-1][y][z]=4)
+					if(map[prevx][y][z]=4)
 					{
 						map[x][y][z]=gen(3,5);	
 					}
-					if(map[x-1][y][z]=5)
+					if(map[prevx][y][z]=5)
 					{
 						map[x][y][z]=gen(4,6);	
 					}
-					if(map[x-1][y][z]=6)
+					if(map[prevx][y][z]=6)
 					{
 						map[x][y][z]=gen(5,7);	
 						if(map[x-1][y][z]=7)
