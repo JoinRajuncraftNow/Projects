@@ -25,7 +25,7 @@ extern int primary;
 extern int secondary;
 extern int raceid;
 extern string enemy;
-extern int map[1000][1000][5];
+extern int map[200][200][3];
 void combat() //This is where the combat will be.
 {
   enemyid=gen(1, 5);
