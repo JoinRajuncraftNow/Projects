@@ -23,35 +23,13 @@ extern int damage;
 extern int primary;
 extern int secondary;
 extern int raceid;
-extern int map[100][100][5];
-int gen(int x_, int y_) //Generates a random number between x and y.
+extern int map[200][200][3]; //that might just be a LITTLE too big.
+int gen(int d, int g) //Generates a random number between x and y.
 {
-	return rand()%(y_-x_+1)+x_;
+	return rand()%(g-d+1)+d; //OUTPUTS ONLY 6!!! WTF
 }
 
 //MAP FUNCTIONS
-void mapgen()
-{
-	cout << "Generating Map..." << endl; //Randomly generates map.
-	while(x<100)
-	{
-		while(y<100)
-		{
-			while(z<5)
-			{
-				map[x][y][z]=gen(1,50); 
-				z++;
-			}
-			y++;
-			z=0;
-		}
-		x++;
-		y=0;
-	}
-	map[99][99][0]=11;
-	x=0; //y is already 0!
-	z=4;
-}
 void tile()
 {
 	/*
@@ -60,34 +38,34 @@ void tile()
 	switch(map[x][y][z])
 	{
 	case 1:
-		//forest
+		cout << "#"; //forest
 		break;
 	case 2:
-		//clearing
+		cout << "$"; //clearing
 		break;
 	case 3:
-		//mountains
+		cout << "?"; //plains
 		break;
 	case 4:
-		//hills
+		cout << "@"; //hills
 		break;
 	case 5:
-		//plains
+		cout << "^"; //mountains
 		break;
 	case 6:
-		//river
+		cout << "&"; //desert
 		break;
 	case 7:
-		//city (may make you able to enter city.)
+		//plains
 		break;
 	case 8:
-		//cottage
+		//city
 		break;
 	case 9:
-		//swamp
+		//town
 		break;
 	case 10:
-		//lake
+		//settlement
 		break;
 	case 11:
 		//stuff
@@ -216,5 +194,111 @@ void tile()
 		}
 		break;
 	}
+}
+void mapgen()
+{
+	int prevy=0, prevx=0;
+	cout << "Generating Map..." << endl;
+	x=0;
+	y=0;
+	z=3; //I WANT TO KILL MYSELF RIGHT NOW
+	map[x][y][z]=gen(1,6);
+	x++;
+	/*while(z>0)
+	{*/
+		int testtilevalue=0, tiley, tilex;
+		while(y<200)//LOL it outputs nothing but ?'s'
+		{
+			while(x<200)
+			{
+				prevy=y-1;
+				prevx=x-1;
+				tiley=map[x][prevy][z];
+				tilex=map[prevx][y][z];
+				if(y>0)
+				{
+					if(tilex-tiley==2||tilex-tiley==-2)
+					{
+						testtilevalue=(map[prevx][y][z]+map[x][prevy][z])/2;
+					}else{
+						testtilevalue=map[x][prevy][z];
+					}					
+					switch(testtilevalue)
+					{
+					case 1:
+						map[x][y][z]=gen(1,2);	
+						break;
+					case 2:
+						map[x][y][z]=gen(1,3);
+						break;
+					case 3:
+						map[x][y][z]=gen(2,4);
+						break;
+					case 4:
+						map[x][y][z]=gen(3,5);
+						break;
+					case 5:
+						map[x][y][z]=gen(4,6);
+						break;
+					case 6:
+						map[x][y][z]=gen(5,7);
+						if(map[x][y][z]=7)
+						{
+							map[x][y][z]=3;	
+						}
+						break;
+					default:
+						while(1)
+						{
+							cout << "YOU GOT OUT OF THE MATRIX, AHHHH!";
+						}
+						break;
+					}
+				}else{
+					switch(map[prevx][y][z])
+					{
+					case 1:
+						map[x][y][z]=gen(1,2);	
+						break;
+					case 2:
+						map[x][y][z]=gen(1,3);
+						break;
+					case 3:
+						map[x][y][z]=gen(2,4);
+						break;
+					case 4:
+						map[x][y][z]=gen(3,5);
+						break;
+					case 5:
+						map[x][y][z]=gen(4,6);
+						break;
+					case 6:
+						map[x][y][z]=gen(5,7);
+						if(map[x][y][z]=7)
+						{
+							map[x][y][z]=3;	
+						}
+						break;
+					default:
+						while(1)
+						{
+							cout << "YOU GOT OUT OF THE MATRIX, AHHHH!";
+						}
+						break;
+					}
+				}
+				tile();
+				x++;
+			}
+			y++;
+			x=0;
+			cout << endl;
+		}
+		y=0;
+		/*z--;
+	}*/
+	map[199][199][2]=50;
+	x=0; //y is already 0!
+	z=2;
 }
 #endif
