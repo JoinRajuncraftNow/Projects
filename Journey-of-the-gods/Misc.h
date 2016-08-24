@@ -23,7 +23,7 @@ extern int damage;
 extern int primary;
 extern int secondary;
 extern int raceid;
-extern int map[1000][1000][5];
+extern int map[200][200][3]; //that might just be a LITTLE too big.
 int gen(int x, int y) //Generates a random number between x and y.
 {
 	return rand()%(y-x+1)+x;
@@ -112,7 +112,7 @@ void mapgen()
 		y=0;
 		z++;
 	}
-	map[999][999][0]=50;
+	map[199][199][0]=50;
 	x=0; //y is already 0!
 	z=4;
 }
