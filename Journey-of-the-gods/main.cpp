@@ -103,6 +103,7 @@ int main()
 		}
 	}
 	cout << endl << "[You chose " << race << "]" << endl;
+	mapgen();
 	while(1)
 	{
 		command();
