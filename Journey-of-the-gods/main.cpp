@@ -9,7 +9,8 @@ using namespace std; //This might fix it
 #include "Quests.h"
 #include "Player.h"
 #include "Misc.h"
-int killcount, x, y, z, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
+int x=0,y=0,z=0;
+int killcount, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
 int map[100][100][5];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
