@@ -26,7 +26,7 @@ extern int raceid;
 extern int map[200][200][3]; //that might just be a LITTLE too big.
 int gen(int x, int y) //Generates a random number between x and y.
 {
-	return rand()%(y-x+1)+x;
+	return rand()%(y-x+1)+x; //OUTPUTS ONLY 6!!! WTF
 }
 
 //MAP FUNCTIONS
@@ -272,29 +272,6 @@ void mapgen()
 							map[x][y][z]=3;	
 						}
 					}	
-					switch(map[x][y][z])
-					{
-				case 1:
-					cout << "#"; //forest
-					break;
-				case 2:
-					cout << "$"; //clearing
-					break;
-				case 3:
-					cout << "?"; //plains
-					break;
-				case 4:
-					cout << "@"; //hills
-					break;
-				case 5:
-					cout << "^"; //mountains
-					break;
-				case 6:
-					cout << "&"; //desert
-					break;
-				default:
-					break;	
-					}
 				}
 				tile();
 				x++;
