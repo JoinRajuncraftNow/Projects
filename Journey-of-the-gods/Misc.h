@@ -272,6 +272,29 @@ void mapgen()
 							map[x][y][z]=3;	
 						}
 					}	
+					switch(map[x][y][z])
+					{
+				case 1:
+					cout << "#"; //forest
+					break;
+				case 2:
+					cout << "$"; //clearing
+					break;
+				case 3:
+					cout << "?"; //plains
+					break;
+				case 4:
+					cout << "@"; //hills
+					break;
+				case 5:
+					cout << "^"; //mountains
+					break;
+				case 6:
+					cout << "&"; //desert
+					break;
+				default:
+					break;	
+					}
 				}
 				tile();
 				x++;
