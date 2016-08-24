@@ -203,6 +203,7 @@ void mapgen()
 	y=0;
 	z=3; //I WANT TO KILL MYSELF RIGHT NOW
 	map[x][y][z]=gen(1,6);
+	cout << map[x][y][z];
 	x++;
 	/*while(z>0)
 	{*/
