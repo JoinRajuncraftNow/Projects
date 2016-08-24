@@ -37,11 +37,11 @@ void mapgen()
 	y=0;
 	z=4;
 	map[x][y][z]=gen(1,6);
-	while(z<5)
+	while(z<3)
 	{
-		while(y<1000)
+		while(y<200)
 		{
-			while(x<1000)
+			while(x<200)
 			{
 				if(y>0)
 				{
@@ -112,9 +112,9 @@ void mapgen()
 		y=0;
 		z++;
 	}
-	map[199][199][0]=50;
+	map[199][199][2]=50;
 	x=0; //y is already 0!
-	z=4;
+	z=2;
 }
 void tile()
 {
