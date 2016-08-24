@@ -43,6 +43,7 @@ void mapgen()
 		{
 			while(x<1000)
 			{
+				sleep(10);
 				if(y>0)
 				{
 					if(map[x][y-1][z]=1)
