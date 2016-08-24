@@ -44,7 +44,7 @@ void tile()
 		cout << "$"; //clearing
 		break;
 	case 3:
-		cout << "%"; //plains
+		cout << "?"; //plains
 		break;
 	case 4:
 		cout << "@"; //hills
