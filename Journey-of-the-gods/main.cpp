@@ -11,7 +11,7 @@ using namespace std; //This might fix it
 #include "Misc.h"
 int x=0,y=0,z=0;
 int killcount, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
-int map[100][100][5];
+int map[200][200][3];
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
