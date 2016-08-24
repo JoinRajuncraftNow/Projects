@@ -4,7 +4,7 @@ using namespace std; //This might fix it
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <stdlib.h>
+#include <windows.h> //wrong one!
 #include "conio.h"
 #include "Combat.h"
 #include "Quests.h"
