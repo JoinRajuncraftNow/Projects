@@ -23,5 +23,5 @@ extern int damage;
 extern int primary;
 extern int secondary;
 extern int raceid;
-extern int map[200][200][3];
+extern int map[100][100][5];
 #endif
