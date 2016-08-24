@@ -208,6 +208,7 @@ void mapgen()
 		{
 			while(x<200)
 			{
+				cout << "TEST";
 				if(y>0)
 				{
 					if(map[x][y-1][z]=1)
