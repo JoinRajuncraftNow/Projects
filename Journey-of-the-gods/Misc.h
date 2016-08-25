@@ -24,6 +24,10 @@ extern int primary;
 extern int secondary;
 extern int raceid;
 extern int map[200][200][3]; //that might just be a LITTLE too big.
+extern int visited[200][200][3]; //for quests or how peeps react to you.
+extern int medkit[200][200][3]; //for shops
+extern int armor[200][200][3]; //for shops
+extern int weapon[200][200][3]; //for shops
 int gen(int d, int g) //Generates a random number between x and y.
 {
 	return rand()%(g-d+1)+d; //OUTPUTS ONLY 6!!! WTF
