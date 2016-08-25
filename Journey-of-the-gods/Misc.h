@@ -38,34 +38,34 @@ void tile()
 	switch(map[x][y][z])
 	{
 	case 1:
-		cout << "#"; //forest
+		cout << "------FOREST------"; //forest
 		break;
 	case 2:
-		cout << "$"; //clearing
+		cout << "------CLEARING------"; //clearing
 		break;
 	case 3:
-		cout << "?"; //plains
+		cout << "------PLAINS------"; //plains
 		break;
 	case 4:
-		cout << "@"; //hills
+		cout << "------HILLS------"; //hills
 		break;
 	case 5:
-		cout << "^"; //mountains
+		cout << "------MOUNTAINS------"; //mountains
 		break;
 	case 6:
-		cout << "&"; //desert
+		cout << "------DESERT------"; //desert
 		break;
 	case 7:
-		//trading station
+		cout << "------TRADING STATION-------"; //trading station
 		break;
 	case 8:
-		//city
+		cout << "------CITY-------"; //city
 		break;
 	case 9:
-		//town
+		cout << "------TOWN-------"; //town
 		break;
 	case 10:
-		//settlement
+		cout << "------SETTLEMENT-------"; //settlement
 		break;
 	case 11:
 		//stuff
