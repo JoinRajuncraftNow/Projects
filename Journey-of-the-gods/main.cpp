@@ -12,6 +12,10 @@ using namespace std; //This might fix it
 int x=0,y=0,z=0;
 int killcount, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
 int map[200][200][3];
+int visited[200][200][3]; //for quests or how peeps react to you.
+int medkit[200][200][3]; //for shops
+int armor[200][200][3]; //for shops
+int weapon[200][200][3]; //for shops
 string enemy, questline, name, race, inv; //I hope this works.
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
