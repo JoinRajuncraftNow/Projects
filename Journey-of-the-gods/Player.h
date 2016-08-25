@@ -24,6 +24,10 @@ extern int primary;
 extern int secondary;
 extern int raceid;
 extern int map[200][200][3];
+extern int visited[200][200][3]; //for quests or how peeps react to you.
+extern int medkit[200][200][3]; //for shops
+extern int armor[200][200][3]; //for shops
+extern int weapon[200][200][3]; //for shops
 void forward() //Don't remember if I can do this here, so I will just assume I can until I can test it.
 {
   y++;
