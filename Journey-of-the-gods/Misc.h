@@ -56,7 +56,7 @@ void tile()
 		cout << "&"; //desert
 		break;
 	case 7:
-		//plains
+		//trading station
 		break;
 	case 8:
 		//city
@@ -197,11 +197,11 @@ void tile()
 }
 void mapgen()
 {
-	int prevy=0, prevx=0;
+	int prevy=0, prevx=0, random=0;
 	cout << "Generating Map..." << endl;
 	x=0;
 	y=0;
-	z=3; //I WANT TO KILL MYSELF RIGHT NOW
+	z=2; //I WANT TO KILL MYSELF RIGHT NOW
 	map[x][y][z]=gen(1,6);
 	x++;
 	/*while(z>0)
@@ -297,8 +297,37 @@ void mapgen()
 		y=0;
 		/*z--;
 	}*/
-	map[199][199][2]=50;
-	x=0; //y is already 0!
+	x=0;
+	y=0;
+	z=2;
+	cout << "Placing Enemies..." << endl;
+	map[x][y][z]=gen(1,6);
+	x++;
+	/*while(z>0)
+	{*/
+		while(y<200)//LOL it outputs nothing but ?'s'
+		{
+			while(x<200)
+			{
+				if(gen(1,5)==1)
+				{
+					map[x][y][z]=map[x][y][z]+10;
+				}elseif(gen(1,10)==1)
+				{
+					map[x][y][z]=gen(7,10);	
+				}
+				x++;
+			}
+			y++;
+			x=0;
+			cout << endl;
+		}
+		y=0;
+		/*z--;
+	}*/
+	map[199][199][0]=50;
+	y=0;
+	x=0;
 	z=2;
 }
 #endif
