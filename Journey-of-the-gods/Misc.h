@@ -215,6 +215,7 @@ void mapgen()
 		{
 			while(x<200)
 			{
+				visited[x][y][z]=0;
 				prevy=y-1;
 				prevx=x-1;
 				tiley=map[x][prevy][z];
@@ -319,6 +320,36 @@ void mapgen()
 				}else if(gen(1,10)==1)
 				{
 					map[x][y][z]=gen(7,10);	
+					switch(map[x][y][z])
+					{
+					case 7: //trading station
+						weapon[x][y][z]=1; //If somone upgrades their weapon at a trading station, this is how much damage is added to their current weapon. It is set to 0 once the player buys it.
+						armor[x][y][z]=1; //Same as weapon but for armor
+						medkit[x][y][z]=gen(2,3); //How many medkits this place has to buy
+						break;
+					case 8: //city
+						weapon[x][y][z]=gen(8,10);
+						armor[x][y][z]=gen(8,10);
+						medkit[x][y][z]=gen(15,20);
+						break;
+					case 9: //town
+						weapon[x][y][z]=gen(4,6);
+						armor[x][y][z]=gen(4,6);
+						medkit[x][y][z]=gen(8,13);
+						break;
+					case 10: //settlement
+						weapon[x][y][z]=gen(2,4);
+						armor[x][y][z]=gen(2,4);
+						medkit[x][y][z]=gen(3,8);
+						break;
+					default:
+						while(1)
+						{
+							cout << "NEVER GONNA LET YOU GO!!!";
+						}
+						break;
+						
+					}
 				}
 				x++;
 			}
