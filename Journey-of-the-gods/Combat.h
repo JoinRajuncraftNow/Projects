@@ -26,10 +26,11 @@ extern int weapon[200][200][3]; //for shops
 void combat() //This is where the combat will be.
 {
   enemyid=gen(1, 5);
-  ehelm=gen(1, 3); //1 is 0% defence, 2 is 4% defence, and 3 is 10% defence.
+  /*ehelm=gen(1, 3); //1 is 0% defence, 2 is 4% defence, and 3 is 10% defence.
   echest=gen(1, 3);
   eleggings=gen(1, 3);
-  eboots=gen(1, 3);
+  eboots=gen(1, 3);*/
+  enemyarmor = gen(1,3);
   switch(enemyid)
   {
   case 1:
