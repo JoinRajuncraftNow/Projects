@@ -36,9 +36,6 @@ int gen(int d, int g) //Generates a random number between x and y.
 //MAP FUNCTIONS
 void tile()
 {
-	/*
-	Think we could make actual realistic map generation? It would take some thinking, but I think we could do it. Especially at this small of a scale.
-	*/
 	switch(map[x][y][z])
 	{
 	case 1:
@@ -287,12 +284,11 @@ void mapgen()
 					default:
 						while(1)
 						{
-							cout << "YOU GOT OUT OF THE MATRIX, AHHHH!";
+							cout << "YOU GOT OUT OF THE MATRIX, AHHHH!!!";
 						}
 						break;
 					}
 				}
-				tile();
 				x++;
 			}
 			y++;
@@ -323,7 +319,7 @@ void mapgen()
 					switch(map[x][y][z])
 					{
 					case 7: //trading station
-						weapon[x][y][z]=1; //If somone upgrades their weapon at a trading station, this is how much damage is added to their current weapon. It is set to 0 once the player buys it.
+						weapon[x][y][z]=1; //If someone upgrades their weapon at a trading station, this is how much damage is added to their current weapon. It is set to 0 once the player buys it.
 						armor[x][y][z]=1; //Same as weapon but for armor
 						medkit[x][y][z]=gen(2,3); //How many medkits this place has to buy
 						break;
