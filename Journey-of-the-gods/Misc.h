@@ -8,21 +8,16 @@ extern int y;
 extern int z;
 extern int health;
 extern int magic;
-extern int helm;
-extern int chest;
-extern int leggings;
-extern int boots;
+extern int playerarmor;
 extern int quest;
 extern int enemyid;
 extern int ehealth;
-extern int ehelm;
-extern int echest;
-extern int eleggings;
-extern int eboots;
-extern int damage;
-extern int primary;
+extern int enemyarmor;
+extern int playerweapon;
 extern int secondary;
 extern int raceid;
+extern string enemy;
+extern int damage;
 extern int map[200][200][3]; //that might just be a LITTLE too big.
 extern int visited[200][200][3]; //for quests or how peeps react to you.
 extern int medkit[200][200][3]; //for shops
