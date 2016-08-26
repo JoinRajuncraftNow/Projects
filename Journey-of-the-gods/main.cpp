@@ -10,7 +10,7 @@ using namespace std; //This might fix it
 #include "Player.h"
 #include "Misc.h"
 int x=0,y=0,z=0;
-int killcount, health, magic, helm, chest, leggings, boots, quest, enemyid, ehealth, ehelm, echest, eleggings, eboots, damage, primary, secondary, raceid;
+int killcount, health, magic, playerarmor, quest, enemyid, enemyarmor, damage, playerweapon, raceid;
 int map[200][200][3];
 int visited[200][200][3]; //for quests or how peeps react to you.
 int medkit[200][200][3]; //for shops
@@ -40,10 +40,12 @@ void command()
 		right();  // key right (D)
 		break;
 	case 'r':
-		up();    //key R
+		//up();    //key R
+		cout << "Not implemented yet!" << endl;
 		break;
 	case 'f':
-		down();   // key F
+		//down();   // key F
+		cout << "Not implemented yet!" << endl;
 		break;
 	case 'q':
 		q();  // key Q
@@ -61,8 +63,8 @@ Variables:
 killcount- Keeps track of how many enemies you have killed. Can be used in quests.
 x, y, z- Keeps track of position of player.
 health- Player health
-helm, chest, leggings, boots- Armor level of differant pieces.
-primary, secondary- Things in your hands.
+playerarmor- Armor level of differant pieces.
+playerweapon- Things in your hands.
 enemy- Name of enemy that you are fighting.
 enemyid-ID of enemy.
 name- Name of player
