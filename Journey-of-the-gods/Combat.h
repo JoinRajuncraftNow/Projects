@@ -62,7 +62,7 @@ void combat() //This is where the combat will be.
 
 int adamage()
 {
-  switch(primary)
+  switch(playerweapon)
   {
   case 1:
     damage=gen(10, 20);
