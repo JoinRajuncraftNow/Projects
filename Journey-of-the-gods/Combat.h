@@ -13,7 +13,7 @@ extern int playerarmor;
 extern int quest;
 extern int enemyid;
 extern int ehealth;
-extern int emenyarmor;
+extern int enemyarmor;
 extern int playerweapon;
 extern int secondary;
 extern int raceid;
