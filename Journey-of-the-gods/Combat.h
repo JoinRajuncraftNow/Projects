@@ -86,9 +86,9 @@ void death()
 {
   //No return -1 for a placeholder, as it is void
 }
-void do_damage(int& damage, int& health) //You can't have a function damage and a variable damage at the same time.
+void do_damage(int& damage_, int& health_) //You can't have a function damage and a variable damage at the same time.
 {
-  health-=damage;
+  health_-=damage_;
 }
 //Spells:
 int fireball() //Deals medium damage and has a chance of lighting the enemy on fire.
