@@ -14,7 +14,6 @@ extern int enemyid;
 extern int ehealth;
 extern int enemyarmor;
 extern int playerweapon;
-extern int secondary;
 extern int raceid;
 extern string enemy;
 extern int damage;
