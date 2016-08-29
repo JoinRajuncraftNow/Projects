@@ -25,6 +25,7 @@ extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
 void combat() //This is where the combat will be.
 {
+  int combatcommand;
   enemyid=gen(1, 5);
   /*ehelm=gen(1, 3); //1 is 0% defence, 2 is 4% defence, and 3 is 10% defence.
   echest=gen(1, 3);
@@ -46,7 +47,7 @@ void combat() //This is where the combat will be.
     ehealth=1000;
     break;
   case 4:
-    enemy="Undead Bandit";
+    enemy="Zombie Bandit"; //Cause I'm too lazy for a/an
     ehealth=2000;
     break;
   case 5:
@@ -56,6 +57,27 @@ void combat() //This is where the combat will be.
   default: 
     enemy="Glitch";
     ehealth=2147483647; //Maximum value for an integer, let's not have it be negative
+    break;
+  }
+  cout << endl << "A " << enemy << " approaches!" << endl;
+  cout << "Command: ";
+  cin >> combatcommand;
+  switch(combatcommand)
+  {
+  case 1:
+    
+    break;
+  case 2:
+    
+    break;
+  case 3:
+    
+    break;
+  case 4:
+    
+    break;
+  default:
+    
     break;
   }
 }
