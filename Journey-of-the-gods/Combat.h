@@ -62,25 +62,7 @@ void combat() //This is where the combat will be.
 
 int adamage()
 {
-  switch(playerweapon)
-  {
-  case 1:
-    damage=gen(10, 20);
-    break;
-  case 2:
-    damage=gen(20, 40);
-    break;
-  case 3:
-    damage=gen(2, 10);
-    break;
-  case 4:
-    damage=gen(5, 25);
-    break;
-  default: 
-    damage=gen(1, 5);
-    break;
-  }
-  return -1;
+  // damage=gen(10, 20); I am in algebra right now, so I cannot work on dis.
 }
 void death()
 {
