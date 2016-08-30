@@ -56,7 +56,7 @@ void combat() //This is where the combat will be.
     break;
   }
   cout << endl << "A " << enemy << " approaches!" << endl;
-  loop=0;
+  int loop=0;
   while(loop!=1)
   {
     cout << "Command: ";
