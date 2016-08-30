@@ -69,7 +69,7 @@ void combat() //This is where the combat will be.
     {
       cout << "Command: ";
       cin.get(combatcommand);
-      endl;
+      cout << endl;
       switch(combatcommand)
       {
       case 'q': //quick slash
