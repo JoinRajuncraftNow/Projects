@@ -3,6 +3,7 @@ using namespace std; //For misc. functions and stuff.
 #define MISC_H
 #include "headers.h"
 extern int killcount;
+extern int medkit;
 extern int x;
 extern int y;
 extern int z;
