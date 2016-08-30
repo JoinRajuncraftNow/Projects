@@ -7,6 +7,7 @@ extern int x;
 extern int y;
 extern int z;
 extern int health;
+extern int medkit;
 extern int magic;
 extern int playerarmor;
 extern int quest;
