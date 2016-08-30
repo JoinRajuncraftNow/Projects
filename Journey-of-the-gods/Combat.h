@@ -16,6 +16,7 @@ extern int ehealth;
 extern int enemyarmor;
 extern int playerweapon;
 extern int raceid;
+extern int medkit;
 extern string enemy;
 extern int damage;
 extern int map[200][200][3];
@@ -23,6 +24,10 @@ extern int visited[200][200][3]; //for quests or how peeps react to you.
 extern int medkit[200][200][3]; //for shops
 extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
+int enemydamage()
+{
+  // damage=gen(10, 20); I am in algebra right now, so I cannot work on dis.
+}
 void combat() //This is where the combat will be.
 {
   int edamage=0;
@@ -105,7 +110,7 @@ void combat() //This is where the combat will be.
         loop=1;
         break;
       default:
-        cout << "Unknown command. Type "h" for help. Also keep in mind that all commands use lowercase letters." << endl;
+        cout << "Unknown command. Type 'h' for help. Also keep in mind that all commands use lowercase letters." << endl;
         break;
       }
       if(health<=0)
