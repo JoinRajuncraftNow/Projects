@@ -112,6 +112,7 @@ int main()
 	mapgen();
 	while(1)
 	{
+		combat(); //To test
 		command();
 	}
 	return 0;
