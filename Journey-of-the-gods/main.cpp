@@ -28,33 +28,44 @@ void command()
 	switch(c=(char)getch())
 	{
 	case 'w':
+	case 'W':
 		forward();    //key up (W)
 		break;
 	case 's':
+	case 'S':
 		backward();   // key down (S)
 		break;
 	case 'a':
+	case 'A':
 		left();  // key left (A)
 		break;
 	case 'd':
+	case 'D':
 		right();  // key right (D)
 		break;
 	case 'r':
+	case 'R':
 		//up();    //key R
 		cout << "Not implemented yet!" << endl;
 		break;
 	case 'f':
+	case 'g':
 		//down();   // key F
 		cout << "Not implemented yet!" << endl;
 		break;
 	case 'q':
+	case 'Q':
 		q();  // key Q
 		break;
 	case 'e':
+	case 'E':
 		e();  // key E
 		break;
+	case 'h':
+	case 'H':
+		cout << "Help is not currently available, as the game is coming along VERY slowly!" << endl;
 	default:
-		cout << endl << "Unknown Command. Type 'H' for help, which is unavailable currently." << endl;  // not valid
+		cout << endl << "Unknown Command." << endl;  // not valid
 		break;
 	}
 }
