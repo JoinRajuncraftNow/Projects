@@ -1,4 +1,4 @@
-#ifdef _WIN32
+/*#ifdef _WIN32
 #define _WIN64
 #endif
 #ifdef __unix
@@ -57,3 +57,12 @@ int getch() //Just in the case that Alex uses getch
 	return key();
 }
 #endif
+*/
+#include <iostream>
+using namespace std;
+int getch()
+{
+	char c;
+	cin << c;
+	return (int)c;
+}
