@@ -123,10 +123,6 @@ void combat() //This is where the combat will be.
     }
   }
 }
-int enemydamage()
-{
-  // damage=gen(10, 20); I am in algebra right now, so I cannot work on dis.
-}
 void death()
 {
   //No return -1 for a placeholder, as it is void
