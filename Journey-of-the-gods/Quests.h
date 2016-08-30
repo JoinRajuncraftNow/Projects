@@ -20,7 +20,7 @@ extern string enemy;
 extern int damage;
 extern int map[200][200][3];
 extern int visited[200][200][3]; //for quests or how peeps react to you.
-extern int medkit[200][200][3]; //for shops
+extern int smedkit[200][200][3]; //for shops
 extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
 #endif
