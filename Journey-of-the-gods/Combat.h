@@ -73,14 +73,17 @@ void combat() //This is where the combat will be.
       switch(combatcommand)
       {
       case 'q': //quick slash
+      //case 'Q':
         loop=1;
         cout << "Quick Slash!" << endl; //WORKS!
         break;
       case 'b': //big slash
+      //case 'B':
         loop=1;
         cout << "Big Slash!" << endl;
         break;
       case 'd': //dodge
+      //case 'D':
         loop=1;
         cout << "You attempt to dodge!" << endl;
         if(gen(1,10)<10)
@@ -92,12 +95,14 @@ void combat() //This is where the combat will be.
         }
         break;
       case 'm': //medkit
+      //case 'M':
         loop=1;
         if(medkit>0) 
         {
           cout << "You use a medkit, your health is restored!" << endl;
           medkit--;
           health=1000;
+          cout << enemy << " deals " << edamage << " damage!";
         }else{
           edamage=enemydamage();
           cout << "You fumble with your pack, only to realize you are out of medkits!" << endl << enemy << " deals " << edamage << " damage!" << endl;
@@ -117,7 +122,7 @@ void combat() //This is where the combat will be.
       {
         cout << "You have died!" << endl; //I may make it output stats or something.
         while(1) { }
-      }else if(ehealth<=0){
+      }else if(ehealth<=0){ //THANK YOU!
         cout << enemy << " has been slain!" << endl;
       }
     }
