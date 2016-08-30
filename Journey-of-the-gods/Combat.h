@@ -25,7 +25,8 @@ extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
 void combat() //This is where the combat will be.
 {
-  char combatcommand;
+  int edamage=0;
+  char combatcommand, counter;
   enemyid=gen(1, 5);
   enemyarmor = gen(1,3);
   switch(enemyid)
@@ -56,40 +57,68 @@ void combat() //This is where the combat will be.
     break;
   }
   cout << endl << "A " << enemy << " approaches!" << endl;
-  int loop=0;
-  while(loop!=1)
+  int loop=0, dodgesuccess=0;
+  while(health>0||ehealth<0)
   {
-    cout << "Command: ";
-    cin.get(combatcommand);
-    switch(combatcommand)
+    while(loop!=1)
     {
-    case 'q': //Idk if this works, I may have to use the number equivs...
-      loop=1;
-      while(1)
+      cout << "Command: ";
+      cin.get(combatcommand);
+      endl;
+      switch(combatcommand)
       {
-        cout << "BIG"; //To test
+      case 'q': //quick slash
+        loop=1;
+        cout << "Quick Slash!" << endl; //WORKS!
+        break;
+      case 'b': //big slash
+        loop=1;
+        cout << "Big Slash!" << endl;
+        break;
+      case 'd': //dodge
+        loop=1;
+        cout << "You attempt to dodge!" << endl;
+        if(gen(1,10)<10)
+        {
+          cout << "You successfully dodged!" << endl;
+        }else{
+          edamage=enemydamage();
+          cout << "You attempt to dodge, but the enemy manages to hit you!" << endl << enemy << " deals " << edamage << " damage!" << endl;
+        }
+        break;
+      case 'm': //medkit
+        loop=1;
+        if(medkit>0) 
+        {
+          cout << "You use a medkit, your health is restored!" << endl;
+          medkit--;
+          health=1000;
+        }else{
+          edamage=enemydamage();
+          cout << "You fumble with your pack, only to realize you are out of medkits!" << endl << enemy << " deals " << edamage << " damage!" << endl;
+        }
+        break;
+      case 'h': //help
+        loop=1;
+        break;
+      case 's': //spell
+        loop=1;
+        break;
+      default:
+        cout << "Unknown command. Type "h" for help. Also keep in mind that all commands use lowercase letters." << endl;
+        break;
       }
-      break;
-    case 'b': //big slash
-      loop=1;
-      break;
-    case 'd': //dodge
-      loop=1;
-      break;
-    case 'm': //medkit
-      loop=1;
-      break;
-    case 's': //spell
-      loop=1;
-      break;
-    default:
-      
-      break;
+      if(health<=0)
+      {
+        cout << "You have died!" << endl; //I may make it output stats or something.
+        while(1) { }
+      }else if(ehealth<=0){
+        cout << enemy << " has been slain!" << endl;
+      }
     }
   }
 }
-
-int adamage()
+int enemydamage()
 {
   // damage=gen(10, 20); I am in algebra right now, so I cannot work on dis.
 }
