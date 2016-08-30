@@ -25,12 +25,8 @@ extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
 void combat() //This is where the combat will be.
 {
-  int combatcommand;
+  char combatcommand;
   enemyid=gen(1, 5);
-  /*ehelm=gen(1, 3); //1 is 0% defence, 2 is 4% defence, and 3 is 10% defence.
-  echest=gen(1, 3);
-  eleggings=gen(1, 3);
-  eboots=gen(1, 3);*/
   enemyarmor = gen(1,3);
   switch(enemyid)
   {
@@ -60,25 +56,36 @@ void combat() //This is where the combat will be.
     break;
   }
   cout << endl << "A " << enemy << " approaches!" << endl;
-  cout << "Command: ";
-  cin >> combatcommand;
-  switch(combatcommand)
+  loop=0;
+  while(loop!=1)
   {
-  case 1:
-    
-    break;
-  case 2:
-    
-    break;
-  case 3:
-    
-    break;
-  case 4:
-    
-    break;
-  default:
-    
-    break;
+    cout << "Command: ";
+    cin.get(combatcommand);
+    switch(combatcommand)
+    {
+    case 'q': //Idk if this works, I may have to use the number equivs...
+      loop=1;
+      while(1)
+      {
+        cout << "BIG"; //To test
+      }
+      break;
+    case 'b': //big slash
+      loop=1;
+      break;
+    case 'd': //dodge
+      loop=1;
+      break;
+    case 'm': //medkit
+      loop=1;
+      break;
+    case 's': //spell
+      loop=1;
+      break;
+    default:
+      
+      break;
+    }
   }
 }
 
