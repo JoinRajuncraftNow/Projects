@@ -13,7 +13,7 @@ int x=0,y=0,z=0;
 int killcount, health, magic, playerarmor, quest, enemyid, ehealth, enemyarmor, damage, playerweapon, raceid, medkit;
 int map[200][200][3];
 int visited[200][200][3]; //for quests or how peeps react to you.
-int medkit[200][200][3]; //for shops
+int smedkit[200][200][3]; //for shops
 int armor[200][200][3]; //for shops
 int weapon[200][200][3]; //for shops
 string enemy, questline, name, race, inv; //I hope this works.
