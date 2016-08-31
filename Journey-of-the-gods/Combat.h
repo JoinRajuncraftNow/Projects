@@ -96,13 +96,13 @@ void combat() //This is where the combat will be.
       case 'Q':
         loop=1;
         cout << "Quick Slash!" << endl; //WORKS!
-        ehealth=((ehealth-gen(10,15)+(playerweapon/2))-enemyarmor
+        ehealth=((ehealth-gen(10,15)+(playerweapon/2))-enemyarmor;
         break;
       case 'b': //big slash
       case 'B':
         loop=1;
         cout << "Big Slash!" << endl;
-        ehealth=((ehealth-gen(20,100)+playerweapon)-enemyarmor
+        ehealth=((ehealth-gen(20,100)+playerweapon)-enemyarmor;
         health=health-enemycharging;
         break;
       case 'd': //dodge
@@ -158,7 +158,7 @@ void combat() //This is where the combat will be.
     if(enemycharging==0)
     {
       enemycharging=gen(0,5);
-      cout << "The enemy is preparing to attack!"
+      cout << "The enemy is preparing to attack!" << endl;
     }else if(enemycharging<200)
     {
       enemycharging=enemycharging*2;
