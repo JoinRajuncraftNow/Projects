@@ -26,7 +26,27 @@ extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
 int enemydamage()
 {
-  // damage=gen(10, 20); I am in algebra right now, so I cannot work on dis.
+    switch(enemyid)
+  {
+  case 1:
+    return (gen(10, 15)+enemycharging)-playerarmor;
+    break;
+  case 2:
+    return (gen(10, 25)+enemycharging)-playerarmor;
+    break;
+  case 3:
+    return (gen(10, 15)+enemycharging)-playerarmor;
+    break;
+  case 4:
+    return (gen(10, 25)+enemycharging)-playerarmor;
+    break;
+  case 5:
+    return (gen(10, 25)+enemycharging)-playerarmor;
+    break;
+  default: 
+    return (gen(10000, 1000000)+enemycharging)-playerarmor;
+    break;
+  }
 }
 void combat() //This is where the combat will be.
 {
@@ -62,7 +82,7 @@ void combat() //This is where the combat will be.
     break;
   }
   cout << endl << "A " << enemy << " approaches!" << endl;
-  int loop=0, dodgesuccess=0;
+  int loop=0, dodgesuccess=0, enemycharging=0; //Heh
   while(health>0||ehealth<0)
   {
     while(loop!=1)
@@ -76,21 +96,26 @@ void combat() //This is where the combat will be.
       case 'Q':
         loop=1;
         cout << "Quick Slash!" << endl; //WORKS!
+        ehealth=((ehealth-gen(10,15)+(playerweapon/2))-enemyarmor
         break;
       case 'b': //big slash
       case 'B':
         loop=1;
         cout << "Big Slash!" << endl;
+        ehealth=((ehealth-gen(20,100)+playerweapon)-enemyarmor
+        health=health-enemycharging;
         break;
       case 'd': //dodge
       case 'D':
         loop=1;
-        cout << "You attempt to dodge!" << endl;
         if(gen(1,10)<10)
         {
           cout << "You successfully dodged!" << endl;
+          enemycharging==0;
         }else{
           edamage=enemydamage();
+          health=health-edamage;
+          enemycharging==0;
           cout << "You attempt to dodge, but the enemy manages to hit you!" << endl << enemy << " deals " << edamage << " damage!" << endl;
         }
         break;
@@ -102,15 +127,17 @@ void combat() //This is where the combat will be.
           cout << "You use a medkit, your health is restored!" << endl;
           medkit--;
           health=1000;
-          cout << enemy << " deals " << edamage << " damage!" << endl;
         }else{
           edamage=enemydamage();
+          health=health-edamage;
+          enemycharging==0;
           cout << "You fumble with your pack, only to realize you are out of medkits!" << endl << enemy << " deals " << edamage << " damage!" << endl;
         }
         break;
       case 'h': //help
       case 'H':
         loop=1;
+        cout << "---COMMANDS---" << endl << "H-Command List" << endl << "Q-Quick Slash" << endl << "B-Big Slash" << endl <<  "D-Dodge" << endl << "M-Medkit" << endl << "S-Spell" << endl << "----------------" << endl;
         break;
       case 's': //spell
       case 'S':
@@ -127,6 +154,14 @@ void combat() //This is where the combat will be.
       }else if(ehealth<=0){ //THANK YOU!
         cout << enemy << " has been slain!" << endl;
       }
+    }
+    if(enemycharging==0)
+    {
+      enemycharging=gen(0,5);
+      cout << "The enemy is preparing to attack!"
+    }else if(enemycharging<200)
+    {
+      enemycharging=enemycharging*2;
     }
   }
 }
