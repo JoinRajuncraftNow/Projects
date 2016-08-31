@@ -24,7 +24,7 @@ extern int visited[200][200][3]; //for quests or how peeps react to you.
 extern int smedkit[200][200][3]; //for shops
 extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
-int enemydamage()
+int enemydamage(int enemycharging)
 {
     switch(enemyid)
   {
@@ -101,9 +101,10 @@ void combat() //This is where the combat will be.
       case 'b': //big slash
       case 'B':
         loop=1;
-        cout << "Big Slash!" << endl;
+        cout << "You attack the enemy, but he manages to counter!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
         ehealth=ehealth-gen(20,100)+playerweapon-enemyarmor;
         health=health-enemycharging;
+        enemycharging=0;
         break;
       case 'd': //dodge
       case 'D':
@@ -113,7 +114,7 @@ void combat() //This is where the combat will be.
           cout << "You successfully dodged!" << endl;
           enemycharging==0;
         }else{
-          edamage=enemydamage();
+          edamage=enemydamage(enemycharging);
           health=health-edamage;
           enemycharging==0;
           cout << "You attempt to dodge, but the enemy manages to hit you!" << endl << enemy << " deals " << edamage << " damage!" << endl;
@@ -128,7 +129,7 @@ void combat() //This is where the combat will be.
           medkit--;
           health=1000;
         }else{
-          edamage=enemydamage();
+          edamage=enemydamage(enemycharging);
           health=health-edamage;
           enemycharging==0;
           cout << "You fumble with your pack, only to realize you are out of medkits!" << endl << enemy << " deals " << edamage << " damage!" << endl;
