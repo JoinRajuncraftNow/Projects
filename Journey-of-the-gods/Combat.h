@@ -3,6 +3,7 @@ using namespace std; //All combat-related stuff
 #define COMBAT_H
 #include <cstdlib>
 #include "headers.h"
+#define MAKE_POS(s) ((s) > 0 ? (s) : 0)
 extern int killcount;
 extern int x;
 extern int y;
@@ -24,27 +25,27 @@ extern int visited[200][200][3]; //for quests or how peeps react to you.
 extern int smedkit[200][200][3]; //for shops
 extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
-int enemydamage(int enemycharging)
+int enemydamage(int& enemycharging)
 {
     switch(enemyid)
   {
   case 1:
-    return gen(10, 15)+enemycharging-playerarmor > 0 ? gen(10, 15)+enemycharging-playerarmor : 0;
+    return MAKE_POS(gen(10, 15)+enemycharging-playerarmor);
     break;
   case 2:
-    return gen(10, 25)+enemycharging-playerarmor > 0 ? gen(10,25)+enemycharging-playerarmor : 0;
+    return MAKE_POS(gen(10, 25)+enemycharging-playerarmor);
     break;
   case 3:
-    return gen(10, 15)+enemycharging-playerarmor > 0 ? gen(10, 15)+enemycharging-playerarmor : 0;
+    return MAKE_POS(gen(10, 15)+enemycharging-playerarmor);
     break;
   case 4:
-    return gen(10, 25)+enemycharging-playerarmor > 0 ? gen(10, 25)+enemycharging-playerarmor : 0;
+    return MAKE_POS(gen(10, 25)+enemycharging-playerarmor);
     break;
   case 5:
-    return gen(10, 25)+enemycharging-playerarmor > 0 ? gen(10, 25)+enemycharging-playerarmor : 0;
+    return MAKE_POS(gen(10, 25)+enemycharging-playerarmor);
     break;
   default: 
-    return gen(10000, 1000000)+enemycharging-playerarmor > 0 ? gen(10000, 1000000)+enemycharging-playerarmor : 0;
+    return MAKE_POS(gen(10000, 1000000)+enemycharging-playerarmor);
     break;
   }
 }
@@ -95,14 +96,14 @@ void combat() //This is where the combat will be.
       case 'q': //quick slash
       case 'Q':
         loop=1;
-        damage=gen(10,15)-enemyarmor+playerweapon/2;
+        damage=MAKE_POS(gen(10,15)-enemyarmor+playerweapon/2);
         cout << "Quick Slash!" << endl << "You deal " << damage << " damage!" << endl; //WORKS!
         ehealth=ehealth-damage;
         break;
       case 'b': //big slash
       case 'B':
         loop=1;
-        damage=gen(10,15)-enemyarmor+playerweapon;
+        damage=MAKE_POS(gen(10,15)-enemyarmor+playerweapon);
         cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
         ehealth=ehealth-damage;
         health=health-enemycharging;
@@ -114,11 +115,11 @@ void combat() //This is where the combat will be.
         if(gen(1,10)<10)
         {
           cout << "You successfully dodged!" << endl;
-          enemycharging==0;
+          enemycharging=0;
         }else{
-          edamage=enemydamage(enemycharging);
+          edamage=MAKE_POS(enemydamage(enemycharging));
           health=health-edamage;
-          enemycharging==0;
+          enemycharging=0;
           cout << "You attempt to dodge, but the enemy manages to hit you!" << endl << enemy << " deals " << edamage << " damage!" << endl;
         }
         break;
@@ -131,9 +132,9 @@ void combat() //This is where the combat will be.
           medkit--;
           health=1000;
         }else{
-          edamage=enemydamage(enemycharging);
+          edamage=MAKE_POS(enemydamage(enemycharging));
           health=health-edamage;
-          enemycharging==0;
+          enemycharging=0;
           cout << "You fumble with your pack, only to realize you are out of medkits!" << endl << enemy << " deals " << edamage << " damage!" << endl;
         }
         break;
