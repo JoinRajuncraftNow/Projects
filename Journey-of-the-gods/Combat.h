@@ -83,7 +83,7 @@ void combat() //This is where the combat will be.
   }
   cout << endl << "A " << enemy << " approaches!" << endl;
   int loop=0, dodgesuccess=0, enemycharging=0; //Heh
-  while(health>0||ehealth<0)
+  while(health>0||ehealth>0)
   {
     while(loop!=1)
     {
