@@ -10,7 +10,7 @@ using namespace std; //This might fix it
 #include "Player.h"
 #include "Misc.h"
 int x=0,y=0,z=0;
-int killcount, health, magic, playerarmor, quest, enemyid, ehealth, enemyarmor, damage, playerweapon, raceid, medkit;
+int killcount, health=1000, magic=5, playerarmor=0, quest, enemyid, ehealth, enemyarmor, damage, playerweapon=0, raceid, medkit=0;
 int map[200][200][3];
 int visited[200][200][3]; //for quests or how peeps react to you.
 int smedkit[200][200][3]; //for shops
