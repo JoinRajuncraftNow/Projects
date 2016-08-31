@@ -164,7 +164,8 @@ void combat() //This is where the combat will be.
         cout << "The enemy is preparing to attack!" << endl;
     }else{
         if(enemycharging<200) {
-        enemycharging=enemycharging*2;
+            enemycharging=enemycharging*2;
+        }
     }
   }
 }
