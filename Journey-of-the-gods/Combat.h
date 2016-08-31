@@ -95,14 +95,16 @@ void combat() //This is where the combat will be.
       case 'q': //quick slash
       case 'Q':
         loop=1;
-        cout << "Quick Slash!" << endl; //WORKS!
-        ehealth=ehealth-gen(10,15)-enemyarmor+playerweapon/2;
+        damage=gen(10,15)-enemyarmor+playerweapon/2;
+        cout << "Quick Slash!" << endl << "You deal " << damage << " damage!" << endl; //WORKS!
+        ehealth=ehealth-damage;
         break;
       case 'b': //big slash
       case 'B':
         loop=1;
-        cout << "You attack the enemy, but he manages to counter!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
-        ehealth=ehealth-gen(20,100)+playerweapon-enemyarmor;
+        damage=gen(10,15)-enemyarmor+playerweapon;
+        cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
+        ehealth=ehealth-damage
         health=health-enemycharging;
         enemycharging=0;
         break;
