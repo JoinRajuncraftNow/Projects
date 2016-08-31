@@ -29,22 +29,22 @@ int enemydamage(int enemycharging)
     switch(enemyid)
   {
   case 1:
-    return (gen(10, 15)+enemycharging)-playerarmor;
+    return gen(10, 15)+enemycharging-playerarmor > 0 ? gen(10, 15)+enemycharging-playerarmor : 0;
     break;
   case 2:
-    return (gen(10, 25)+enemycharging)-playerarmor;
+    return gen(10, 25)+enemycharging-playerarmor > 0 ? gen(10,25)+enemycharging-playerarmor : 0;
     break;
   case 3:
-    return (gen(10, 15)+enemycharging)-playerarmor;
+    return gen(10, 15)+enemycharging-playerarmor > 0 ? gen(10, 15)+enemycharging-playerarmor : 0;
     break;
   case 4:
-    return (gen(10, 25)+enemycharging)-playerarmor;
+    return gen(10, 25)+enemycharging-playerarmor > 0 ? gen(10, 25)+enemycharging-playerarmor : 0;
     break;
   case 5:
-    return (gen(10, 25)+enemycharging)-playerarmor;
+    return gen(10, 25)+enemycharging-playerarmor > 0 ? gen(10, 25)+enemycharging-playerarmor : 0;
     break;
   default: 
-    return (gen(10000, 1000000)+enemycharging)-playerarmor;
+    return gen(10000, 1000000)+enemycharging-playerarmor > 0 ? gen(10000, 1000000)+enemycharging-playerarmor : 0;
     break;
   }
 }
