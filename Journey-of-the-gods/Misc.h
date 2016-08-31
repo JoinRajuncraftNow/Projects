@@ -239,7 +239,7 @@ void mapgen()
 						break;
 					case 6:
 						map[x][y][z]=gen(5,7);
-						if(map[x][y][z]=7)
+						if(map[x][y][z]==7)
 						{
 							map[x][y][z]=3;	
 						}
@@ -271,7 +271,7 @@ void mapgen()
 						break;
 					case 6:
 						map[x][y][z]=gen(5,7);
-						if(map[x][y][z]=7)
+						if(map[x][y][z]==7)
 						{
 							map[x][y][z]=3;	
 						}
