@@ -104,7 +104,7 @@ void combat() //This is where the combat will be.
         loop=1;
         damage=gen(10,15)-enemyarmor+playerweapon;
         cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
-        ehealth=ehealth-damage
+        ehealth=ehealth-damage;
         health=health-enemycharging;
         enemycharging=0;
         break;
