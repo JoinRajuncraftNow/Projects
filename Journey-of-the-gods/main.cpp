@@ -123,8 +123,8 @@ int main()
 	mapgen();
 	while(1)
 	{
-		combat(); //To test
 		command();
+		tile()
 	}
 	return 0;
 }
