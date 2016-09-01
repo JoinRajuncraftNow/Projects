@@ -64,6 +64,7 @@ void command()
 	case 'h':
 	case 'H':
 		cout << "Help is not currently available, as the game is coming along VERY slowly!" << endl;
+		break; //I forgot a semicolon
 	default:
 		cout << endl << "Unknown Command." << endl;  // not valid
 		break;
@@ -124,7 +125,7 @@ int main()
 	while(1)
 	{
 		command();
-		tile()
+		tile();
 	}
 	return 0;
 }
