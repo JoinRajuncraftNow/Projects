@@ -64,22 +64,28 @@ void tile()
 		cout << "------SETTLEMENT-------"; //settlement
 		break;
 	case 11:
-		//stuff
+		cout << "------FOREST------"; //forest
+		combat();
 		break;
 	case 12:
-		//stuff
+		cout << "------CLEARING------"; //clearing
+		combat();
 		break;
 	case 13:
-		//stuff
+		cout << "------PLAINS------"; //plains
+		combat();
 		break;
 	case 14:
-		//stuff
+		cout << "------HILLS------"; //hills
+		combat();
 		break;
 	case 15:
-		//stuff
+		cout << "------MOUNTAINS------"; //mountains
+		combat();
 		break;
 	case 16:
-		//stuff
+		cout << "------DESERT------"; //desert
+		combat();
 		break;
 	case 17:
 		//stuff
