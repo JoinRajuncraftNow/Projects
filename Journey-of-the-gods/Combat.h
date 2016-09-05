@@ -3,7 +3,6 @@ using namespace std; //All combat-related stuff
 #define COMBAT_H
 #include <cstdlib>
 #include "headers.h"
-#define MAKE_POS(s) ((s) > 0 ? (s) : 0)
 extern int killcount;
 extern int x;
 extern int y;
@@ -25,6 +24,10 @@ extern int visited[200][200][3]; //for quests or how peeps react to you.
 extern int smedkit[200][200][3]; //for shops
 extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
+int MAKE_POS(int s)
+{
+    return s > 0 ? s : -s;
+}
 int enemydamage(int& enemycharging)
 {
     switch(enemyid)
