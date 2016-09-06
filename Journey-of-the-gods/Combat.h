@@ -212,6 +212,7 @@ void combat() //This is where the combat will be.
         while(1) { }
       }else if(ehealth<=0){ //THANK YOU!
         cout << enemy << " has been slain!" << endl;
+        map[x][y][z]-=10;
       }
     }
     if(enemycharging==0)
