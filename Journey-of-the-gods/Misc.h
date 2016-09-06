@@ -35,57 +35,57 @@ void tile()
 	switch(map[x][y][z])
 	{
 	case 1:
-		cout << "------FOREST------"; //forest
+		cout << "------FOREST------" << endl; //forest
 		break;
 	case 2:
-		cout << "------CLEARING------"; //clearing
+		cout << "------CLEARING------" << endl; //clearing
 		break;
 	case 3:
-		cout << "------PLAINS------"; //plains
+		cout << "------PLAINS------" << endl; //plains
 		break;
 	case 4:
-		cout << "------HILLS------"; //hills
+		cout << "------HILLS------" << endl; //hills
 		break;
 	case 5:
-		cout << "------MOUNTAINS------"; //mountains
+		cout << "------MOUNTAINS------" << endl; //mountains
 		break;
 	case 6:
-		cout << "------DESERT------"; //desert
+		cout << "------DESERT------" << endl; //desert
 		break;
 	case 7:
-		cout << "------TRADING STATION-------"; //trading station
+		cout << "------TRADING STATION-------" << endl; //trading station
 		break;
 	case 8:
-		cout << "------CITY-------"; //city
+		cout << "------CITY-------" << endl; //city
 		break;
 	case 9:
-		cout << "------TOWN-------"; //town
+		cout << "------TOWN-------" << endl; //town
 		break;
 	case 10:
-		cout << "------SETTLEMENT-------"; //settlement
+		cout << "------SETTLEMENT-------" << endl; //settlement
 		break;
 	case 11:
-		cout << "------FOREST------"; //forest
+		cout << "------FOREST------" << endl; //forest
 		combat();
 		break;
 	case 12:
-		cout << "------CLEARING------"; //clearing
+		cout << "------CLEARING------" << endl; //clearing
 		combat();
 		break;
 	case 13:
-		cout << "------PLAINS------"; //plains
+		cout << "------PLAINS------" << endl; //plains
 		combat();
 		break;
 	case 14:
-		cout << "------HILLS------"; //hills
+		cout << "------HILLS------" << endl; //hills
 		combat();
 		break;
 	case 15:
-		cout << "------MOUNTAINS------"; //mountains
+		cout << "------MOUNTAINS------" << endl; //mountains
 		combat();
 		break;
 	case 16:
-		cout << "------DESERT------"; //desert
+		cout << "------DESERT------" << endl; //desert
 		combat();
 		break;
 	case 17:
