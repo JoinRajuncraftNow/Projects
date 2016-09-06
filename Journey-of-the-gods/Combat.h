@@ -213,6 +213,25 @@ void combat() //This is where the combat will be.
       }else if(ehealth<=0){ //THANK YOU!
         cout << enemy << " has been slain!" << endl;
         map[x][y][z]-=10;
+        enemycharging=1000;
+        cout << "What would you like to loot?" << endl << "1-Armor" << endl << "2-Weapon" << endl << "3-Medkit" << endl;
+        int choose;
+        cin >> choose;
+        switch(choose)
+        {
+        case 1:
+        	playerarmor++;
+        	break;	
+        case 2:
+        	playerweapon++;
+        	break;
+        case 3:
+        	medkit++;
+        	break;
+        default:
+        	while(1){ cout<<"A"; }
+        	break;
+        }
       }
     }
     if(enemycharging==0)
