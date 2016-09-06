@@ -119,6 +119,7 @@ void combat() //This is where the combat will be.
   int loop=0, dodgesuccess=0, enemycharging=0; //Heh
   while(health>0&&ehealth>0)
   {
+    loop=0;
     while(loop!=1)
     {
       cout << "Command: ";
