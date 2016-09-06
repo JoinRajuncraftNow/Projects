@@ -122,7 +122,7 @@ void combat() //This is where the combat will be.
     loop=0;
     while(loop!=1)
     {
-      cout << "Command: ";
+      cout << "Health: " << health << endl << enemy << " Health: " << ehealth << endl << "Command: ";
       cin.get(combatcommand);
       cout << endl;
       switch(combatcommand)
