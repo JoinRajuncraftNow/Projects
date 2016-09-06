@@ -33,22 +33,52 @@ int enemydamage(int& enemycharging)
     switch(enemyid)
   {
   case 1:
-    return MAKE_POS(gen(10, 15)+enemycharging-playerarmor);
-    break;
+    if(gen(10, 15)+enemycharging)>=playerarmor);
+    {
+        return gen(10, 15)+enemycharging-playerarmor
+    }else{
+    	return 0;
+    }
+	break;
   case 2:
-    return MAKE_POS(gen(10, 25)+enemycharging-playerarmor);
+    if(gen(10, 25)+enemycharging)>=playerarmor);
+    {
+        return gen(10, 25)+enemycharging-playerarmor
+    }else{
+    	return 0;
+    }
     break;
   case 3:
-    return MAKE_POS(gen(10, 15)+enemycharging-playerarmor);
+    if(gen(10, 15)+enemycharging)>=playerarmor);
+    {
+        return gen(10, 15)+enemycharging-playerarmor
+    }else{
+    	return 0;
+    }
     break;
   case 4:
-    return MAKE_POS(gen(10, 25)+enemycharging-playerarmor);
+    if(gen(10, 25)+enemycharging)>=playerarmor);
+    {
+        return gen(10, 25)+enemycharging-playerarmor
+    }else{
+    	return 0;
+    }
     break;
   case 5:
-    return MAKE_POS(gen(10, 25)+enemycharging-playerarmor);
+    if(gen(10, 25)+enemycharging)>=playerarmor);
+    {
+        return gen(10, 25)+enemycharging-playerarmor
+    }else{
+    	return 0;
+    }
     break;
   default: 
-    return MAKE_POS(gen(10000, 1000000)+enemycharging-playerarmor);
+    if(gen(10000, 1000000)+enemycharging)>=playerarmor);
+    {
+        return gen(10000, 1000000)+enemycharging-playerarmor
+    }else{
+    	return 0;
+    }
     break;
   }
 }
@@ -99,14 +129,24 @@ void combat() //This is where the combat will be.
       case 'q': //quick slash
       case 'Q':
         loop=1;
-        damage=MAKE_POS(gen(10,15)-enemyarmor+playerweapon/2);
+        if(gen(10,15)+playerweapon>=enemyarmor)
+        {
+        	damage=gen(10,15)-enemyarmor+playerweapon/2;	
+        }else{
+        	damage=0;
+        }
         cout << "Quick Slash!" << endl << "You deal " << damage << " damage!" << endl; //WORKS!
         ehealth=ehealth-damage;
         break;
       case 'b': //big slash
       case 'B':
         loop=1;
-        damage=MAKE_POS(gen(10,15)-enemyarmor+playerweapon);
+        if(gen(10,15)+playerweapon>=enemyarmor)
+        {
+        	damage=gen(10,15)-enemyarmor+playerweapon;	
+        }else{
+        	damage=0;
+        }
         cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
         ehealth=ehealth-damage;
         health=health-enemycharging;
@@ -120,7 +160,7 @@ void combat() //This is where the combat will be.
           cout << "You successfully dodged!" << endl;
           enemycharging=0;
         }else{
-          edamage=MAKE_POS(enemydamage(enemycharging));
+          edamage=enemydamage(enemycharging);
           health=health-edamage;
           enemycharging=0;
           cout << "You attempt to dodge, but the enemy manages to hit you!" << endl << enemy << " deals " << edamage << " damage!" << endl;
@@ -135,7 +175,7 @@ void combat() //This is where the combat will be.
           medkit--;
           health=1000;
         }else{
-          edamage=MAKE_POS(enemydamage(enemycharging));
+          edamage=enemydamage(enemycharging);
           health=health-edamage;
           enemycharging=0;
           cout << "You fumble with your pack, only to realize you are out of medkits!" << endl << enemy << " deals " << edamage << " damage!" << endl;
