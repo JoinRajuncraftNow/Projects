@@ -33,7 +33,7 @@ int enemydamage(int& enemycharging)
     switch(enemyid)
   {
   case 1:
-    if(gen(10, 15)+enemycharging)>=playerarmor)
+    if(gen(10, 15)+enemycharging)>playerarmor)
     {
         return gen(10, 15)+enemycharging-playerarmor;
     }else{
@@ -41,7 +41,7 @@ int enemydamage(int& enemycharging)
     }
 	break;
   case 2:
-    if(gen(10, 25)+enemycharging)>=playerarmor)
+    if(gen(10, 25)+enemycharging)>playerarmor)
     {
         return gen(10, 25)+enemycharging-playerarmor;
     }else{
@@ -49,7 +49,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   case 3:
-    if(gen(10, 15)+enemycharging)>=playerarmor)
+    if(gen(10, 15)+enemycharging)>playerarmor)
     {
         return gen(10, 15)+enemycharging-playerarmor;
     }else{
@@ -57,7 +57,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   case 4:
-    if(gen(10, 25)+enemycharging)>=playerarmor)
+    if(gen(10, 25)+enemycharging)>playerarmor)
     {
         return gen(10, 25)+enemycharging-playerarmor;
     }else{
@@ -65,7 +65,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   case 5:
-    if(gen(10, 25)+enemycharging)>=playerarmor)
+    if(gen(10, 25)+enemycharging)>playerarmor)
     {
         return gen(10, 25)+enemycharging-playerarmor;
     }else{
@@ -73,7 +73,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   default: 
-    if(gen(10000, 1000000)+enemycharging)>=playerarmor)
+    if(gen(10000, 1000000)+enemycharging)>playerarmor)
     {
         return gen(10000, 1000000)+enemycharging-playerarmor;
     }else{
