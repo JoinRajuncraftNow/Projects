@@ -146,7 +146,7 @@ void combat() //This is where the combat will be.
         edamage=enemydamage(enemycharging);
           cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << edamage << " damage!" << endl;
           ehealth=ehealth-damage;
-          health=health-edamage
+          health=health-edamage;
           break;
         }
         break;
