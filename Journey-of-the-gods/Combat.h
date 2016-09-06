@@ -84,7 +84,7 @@ int enemydamage(int& enemycharging)
 }
 void combat() //This is where the combat will be.
 {
-  int edamage=0, quickslashcounter;
+  int edamage=0; //nvm
   char combatcommand, counter;
   enemyid=gen(1, 5);
   enemyarmor = gen(1,3);
@@ -136,8 +136,19 @@ void combat() //This is where the combat will be.
         }else{
         	damage=0;
         }
-        cout << "Quick Slash!" << endl << "You deal " << damage << " damage!" << endl; //WORKS!
-        ehealth=ehealth-damage;
+        switch(gen(1,2))
+        {
+        case 1:
+	  cout << "Quick Slash!" << endl << "You deal " << damage << " damage!" << endl; //WORKS!
+	  ehealth=ehealth-damage;
+          break;
+        case 2:
+        edamage=enemydamage(enemycharging);
+          cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << edamage << " damage!" << endl;
+          ehealth=ehealth-damage;
+          health=health-edamage
+          break;
+        }
         break;
       case 'b': //big slash
       case 'B':
@@ -148,11 +159,10 @@ void combat() //This is where the combat will be.
         }else{
         	damage=0;
         }
-        cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
-        ehealth=ehealth-damage;
         edamage=enemydamage(enemycharging);
+        cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << edamage << " damage!" << endl;
+        ehealth=ehealth-damage;
         health=health-edamage;
-        enemycharging=0;
         break;
       case 'd': //dodge
       case 'D':
