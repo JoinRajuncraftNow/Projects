@@ -130,9 +130,9 @@ void combat() //This is where the combat will be.
       case 'q': //quick slash
       case 'Q':
         loop=1;
-        if(gen(10,15)+playerweapon>=enemyarmor)
+        if(gen(20,40)+playerweapon>=enemyarmor)
         {
-        	damage=gen(10,15)-enemyarmor+playerweapon/2;	
+        	damage=gen(20,40)-enemyarmor+playerweapon/2;	
         }else{
         	damage=0;
         }
@@ -153,9 +153,9 @@ void combat() //This is where the combat will be.
       case 'b': //big slash
       case 'B':
         loop=1;
-        if(gen(10,15)+playerweapon>=enemyarmor)
+        if(gen(20,40)+playerweapon>=enemyarmor)
         {
-        	damage=gen(10,15)-enemyarmor+playerweapon;	
+        	damage=gen(20,40)-enemyarmor+playerweapon;	
         }else{
         	damage=0;
         }
