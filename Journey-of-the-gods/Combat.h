@@ -84,7 +84,7 @@ int enemydamage(int& enemycharging)
 }
 void combat() //This is where the combat will be.
 {
-  int edamage=0;
+  int edamage=0, quickslashcounter;
   char combatcommand, counter;
   enemyid=gen(1, 5);
   enemyarmor = gen(1,3);
@@ -150,7 +150,8 @@ void combat() //This is where the combat will be.
         }
         cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << enemycharging << " damage!" << endl;
         ehealth=ehealth-damage;
-        health=health-enemycharging;
+        edamage=enemydamage(enemycharging);
+        health=health-edamage;
         enemycharging=0;
         break;
       case 'd': //dodge
