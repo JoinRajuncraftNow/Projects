@@ -30,52 +30,54 @@ int MAKE_POS(int s)
 }
 int enemydamage(int& enemycharging)
 {
+	int rv = gen(10,15);
     switch(enemyid)
   {
   case 1:
-    if(gen(10, 15)+enemycharging>playerarmor)
+    if(rv+enemycharging>playerarmor)
     {
-        return gen(10, 15)+enemycharging-playerarmor;
+        return rv+enemycharging-playerarmor;
     }else{
     	return 0;
     }
 	break;
   case 2:
-    if(gen(10, 25)+enemycharging>playerarmor)
+    if(rv+enemycharging>playerarmor)
     {
-        return gen(10, 25)+enemycharging-playerarmor;
+        return rv+enemycharging-playerarmor;
     }else{
     	return 0;
     }
     break;
   case 3:
-    if(gen(10, 15)+enemycharging>playerarmor)
+    if(rv+enemycharging>playerarmor)
     {
-        return gen(10, 15)+enemycharging-playerarmor;
+        return rv+enemycharging-playerarmor;
     }else{
     	return 0;
     }
     break;
   case 4:
-    if(gen(10, 25)+enemycharging>playerarmor)
+    if(rv+enemycharging>playerarmor)
     {
-        return gen(10, 25)+enemycharging-playerarmor;
+        return rv+enemycharging-playerarmor;
     }else{
     	return 0;
     }
     break;
   case 5:
-    if(gen(10, 25)+enemycharging>playerarmor)
+    if(rv+enemycharging>playerarmor)
     {
-        return gen(10, 25)+enemycharging-playerarmor;
+        return rv+enemycharging-playerarmor;
     }else{
     	return 0;
     }
     break;
-  default: 
-    if(gen(10000, 1000000)+enemycharging>playerarmor)
+  default:
+    rv = gen(10000,1000000);
+    if(rv+enemycharging>playerarmor)
     {
-        return gen(10000, 1000000)+enemycharging-playerarmor;
+        return rv+enemycharging-playerarmor;
     }else{
     	return 0;
     }
@@ -86,6 +88,7 @@ void combat() //This is where the combat will be.
 {
   int edamage=0; //nvm
   char combatcommand, counter;
+  int rv;
   enemyid=gen(1, 5);
   enemyarmor = gen(1,3);
   switch(enemyid)
@@ -130,9 +133,9 @@ void combat() //This is where the combat will be.
       case 'q': //quick slash
       case 'Q':
         loop=1;
-        if(gen(20,40)+playerweapon>=enemyarmor)
+        if((rv=gen(20,40))+playerweapon>=enemyarmor)
         {
-        	damage=gen(20,40)-enemyarmor+playerweapon/2;	
+        	damage=rv-enemyarmor+playerweapon/2;	
         }else{
         	damage=0;
         }
@@ -153,9 +156,9 @@ void combat() //This is where the combat will be.
       case 'b': //big slash
       case 'B':
         loop=1;
-        if(gen(30,60)+playerweapon>=enemyarmor)
+        if((rv=gen(30,60))+playerweapon>=enemyarmor)
         {
-        	damage=gen(30,60)-enemyarmor+playerweapon;	
+        	damage=rv-enemyarmor+playerweapon;	
         }else{
         	damage=0;
         }
@@ -167,7 +170,7 @@ void combat() //This is where the combat will be.
       case 'd': //dodge
       case 'D':
         loop=1;
-        if(gen(1,10)<10)
+        if((rv=gen(1,10))<10)
         {
           cout << "You successfully dodged!" << endl;
           enemycharging=0;
