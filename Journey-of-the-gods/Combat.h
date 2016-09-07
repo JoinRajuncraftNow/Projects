@@ -217,23 +217,29 @@ void combat() //This is where the combat will be.
         cout << enemy << " has been slain!" << endl;
         map[x][y][z]-=10;
         enemycharging=1000;
-        cout << "What would you like to loot?" << endl << "1-Armor" << endl << "2-Weapon" << endl << "3-Medkit" << endl;
-        int choose;
-        cin >> choose;
-        switch(choose)
+        int choose, cloop=0;
+        while(cloop==0)
         {
-        case 1:
-        	playerarmor++;
-        	break;	
-        case 2:
-        	playerweapon++;
-        	break;
-        case 3:
-        	medkit++;
-        	break;
-        default:
-        	while(1){ cout<<"A"; }
-        	break;
+             cout << "What would you like to loot?" << endl << "1-Armor" << endl << "2-Weapon" << endl << "3-Medkit" << endl;
+             cin >> choose;
+             switch(choose)
+             {
+             case 1:
+        	     playerarmor++;
+              cloop=1;
+        	     break;	
+             case 2:
+        	     playerweapon++;
+              cloop=1;
+        	     break;
+             case 3:
+        	     medkit++;
+              cloop=1;
+        	     break;
+             default:
+        	     cout << "Please only choose 1-3!" << endl;
+        	     break;
+          }
         }
       }
     }
