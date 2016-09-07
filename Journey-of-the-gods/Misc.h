@@ -312,10 +312,10 @@ void mapgen()
 		{
 			while(x<200)
 			{
-				if(gen(1,5)==1)
+				if(gen(1,20)==1)
 				{
 					map[x][y][z]=map[x][y][z]+10;
-				}else if(gen(1,10)==1)
+				}else if(gen(1,50)==1)
 				{
 					map[x][y][z]=gen(7,10);	
 					switch(map[x][y][z])
