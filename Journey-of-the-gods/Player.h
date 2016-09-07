@@ -25,26 +25,44 @@ extern int armor[200][200][3]; //for shops
 extern int weapon[200][200][3]; //for shops
 void forward() //Don't remember if I can do this here, so I will just assume I can until I can test it.
 {
-  y++;
+  if(y!=199)
+  {
+    y++;
+  }
 }
 void backward()
 {
-  y--;
+  if(y!=0)
+  {
+    y--;
+  }
 }
 void left()
 {
-  x--;
+  if(x!=0)
+  {
+    x--;
+  }
 }
 void right()
 {
-  x++;
+  if(x!=199)
+  {
+    x++;
+  }
 }
 void up()
 {
-  z++;
+  if(z!=2)
+  {
+    z++;
+  }
 }
 void down()
 {
-  z--;
+  if(z!=0)
+  {
+    z--;
+  }
 }
 #endif
