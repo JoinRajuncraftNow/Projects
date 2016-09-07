@@ -30,10 +30,11 @@ int MAKE_POS(int s)
 }
 int enemydamage(int& enemycharging)
 {
-	int rv = gen(10,15);
+	int rv;
     switch(enemyid)
   {
   case 1:
+    rv=gen(10,15);
     if(rv+enemycharging>playerarmor)
     {
         return rv+enemycharging-playerarmor;
@@ -42,6 +43,7 @@ int enemydamage(int& enemycharging)
     }
 	break;
   case 2:
+    rv=gen(15,25);
     if(rv+enemycharging>playerarmor)
     {
         return rv+enemycharging-playerarmor;
@@ -50,6 +52,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   case 3:
+    rv=gen(15,25);
     if(rv+enemycharging>playerarmor)
     {
         return rv+enemycharging-playerarmor;
@@ -58,6 +61,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   case 4:
+    rv=gen(15,25);
     if(rv+enemycharging>playerarmor)
     {
         return rv+enemycharging-playerarmor;
@@ -66,6 +70,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   case 5:
+    rv=gen(10,15);
     if(rv+enemycharging>playerarmor)
     {
         return rv+enemycharging-playerarmor;
