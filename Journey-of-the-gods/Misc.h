@@ -53,7 +53,36 @@ void tile()
 		cout << "------DESERT------" << endl; //desert
 		break;
 	case 7:
-		cout << "------TRADING STATION-------" << endl; //trading station
+		cout << "------TRADING STATION-------" << endl;
+		int loop=1, sloop=1;
+		while(loop==1)
+		{
+			loop=0;
+			cout << "You are in a Trading Station! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer] "; //trading station
+			int choice, cost;
+			cin >> choice;
+			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
+			cout << endl;
+			switch(choice)
+			{
+			case 1:
+				cost=weapon[x][y][z]*15;
+				cout << "It will cost you " << cost << " gold coins to upgrade your weapon, would you like to do it? [Y/N] ";
+				break;
+			case 2:
+				cost=20;
+				cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] ";
+				break;
+			case 3:
+				cost=armor[x][y][z]*20;
+				cout << "It will cost you " << cost << " gold coins to upgrade your armor, would you like to do it? [Y/N] ";
+				break;
+			default:
+				loop=1;
+				cout << "Please only select 1-3!"
+				break;
+			}
+		}
 		break;
 	case 8:
 		cout << "------CITY-------" << endl; //city
