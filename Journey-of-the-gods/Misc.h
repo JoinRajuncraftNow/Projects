@@ -56,31 +56,55 @@ void tile()
 	case 7:
 		cout << "------TRADING STATION-------" << endl;
 		int loop=1, sloop=1;
-		while(loop==1)
+		while(loop==0)
 		{
 			loop=0;
-			cout << "You are in a Trading Station! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer] "; //trading station
-			int choice, cost;
+			cout << "You are in a Trading Station! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
+			int choice, cost, tinyloop;
+			char yesorno;
 			cin >> choice;
 			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
 			cout << endl;
 			switch(choice)
 			{
 			case 1:
-				cost=weapon[x][y][z]*15;
-				cout << "It will cost you " << cost << " gold coins to upgrade your weapon, would you like to do it? [Y/N] ";
+				if(weapon[200][200][3]!=0)
+				{
+					cost=weapon[x][y][z]*15;
+					while(tinyloop==1)
+					{
+						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " >> weapon[200][200][3] >> " damage, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							
+						}else if(yesorno=='n'||yesorno=='N'){
+							
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
+				} else {
+					cout << "The weaponsmith cannot upgrade your weapon any further!"
+				}
 				break;
 			case 2:
 				cost=20;
 				cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] ";
+				cin >> yesorno;
 				break;
 			case 3:
 				cost=armor[x][y][z]*20;
 				cout << "It will cost you " << cost << " gold coins to upgrade your armor, would you like to do it? [Y/N] ";
+				cin >> yesorno;
+				break;
+			case 4:
+				loop=1;
 				break;
 			default:
-				loop=1;
-				cout << "Please only select 1-3!"
+				cout << endl << "Please only select 1-4!" << endl;
 				break;
 			}
 		}
