@@ -2,6 +2,7 @@
 #define PLAYER_H
 using namespace std; //All inventory, health, and other stuff.
 #include "headers.h"
+extern int gold;
 extern int killcount;
 extern int medkit;
 extern int x;
