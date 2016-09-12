@@ -87,7 +87,7 @@ void tile()
 					
 					}
 				} else {
-					cout << "The weaponsmith cannot upgrade your weapon any further!"
+					cout << "The weaponsmith cannot upgrade your weapon any further!";
 				}
 				break;
 			case 2:
