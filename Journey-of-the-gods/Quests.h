@@ -2,6 +2,7 @@
 #define QUESTS_H
 #include "headers.h"
 using namespace std; //All Quest-related stuff
+extern int gold;
 extern int killcount;
 extern int x;
 extern int y;
