@@ -2,6 +2,7 @@ using namespace std; //For misc. functions and stuff.
 #ifndef MISC_H
 #define MISC_H
 #include "headers.h"
+extern int gold;
 extern int killcount;
 extern int medkit;
 extern int x;
