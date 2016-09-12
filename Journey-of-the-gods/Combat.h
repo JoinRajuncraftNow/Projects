@@ -3,6 +3,7 @@ using namespace std; //All combat-related stuff
 #define COMBAT_H
 #include <cstdlib>
 #include "headers.h"
+extern int gold;
 extern int killcount;
 extern int x;
 extern int y;
