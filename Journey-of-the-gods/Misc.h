@@ -73,7 +73,7 @@ void tile()
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
-						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " >> weapon[200][200][3] >> " damage, would you like to do it? [Y/N] ";
+						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[200][200][3] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
 						if(yesorno=='y'||yesorno=='Y'){
