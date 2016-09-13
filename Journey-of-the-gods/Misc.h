@@ -55,13 +55,12 @@ void tile()
 		break;
 	case 7:
 		cout << "------TRADING STATION-------" << endl;
-		int sloop=1;
+		int sloop=1,choice, cost, tinyloop;
+		char yesorno;
 		while(sloop==1)
 		{
 			sloop=0;
 			cout << "You are in a Trading Station! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
-			int choice, cost, tinyloop;
-			char yesorno;
 			cin >> choice;
 			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
 			cout << endl;
