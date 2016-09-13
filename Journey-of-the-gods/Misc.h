@@ -33,6 +33,8 @@ int gen(int d, int g) //Generates a random number between x and y.
 //MAP FUNCTIONS
 void tile()
 {
+	int sloop=1,choice, cost, tinyloop;
+	char yesorno;
 	switch(map[x][y][z])
 	{
 	case 1:
@@ -55,8 +57,6 @@ void tile()
 		break;
 	case 7:
 		cout << "------TRADING STATION-------" << endl;
-		int sloop=1,choice, cost, tinyloop;
-		char yesorno;
 		while(sloop==1)
 		{
 			sloop=0;
