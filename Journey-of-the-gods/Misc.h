@@ -56,7 +56,7 @@ void tile()
 	case 7:
 		cout << "------TRADING STATION-------" << endl;
 		int loop=1, sloop=1;
-		while(loop==0)
+		while(loop==1)
 		{
 			loop=0;
 			cout << "You are in a Trading Station! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
