@@ -55,10 +55,10 @@ void tile()
 		break;
 	case 7:
 		cout << "------TRADING STATION-------" << endl;
-		int loop=1, sloop=1;
-		while(loop==1)
+		int sloop=1;
+		while(sloop==1)
 		{
-			loop=0;
+			sloop=0;
 			cout << "You are in a Trading Station! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
 			int choice, cost, tinyloop;
 			char yesorno;
@@ -101,7 +101,7 @@ void tile()
 				cin >> yesorno;
 				break;
 			case 4:
-				loop=1;
+				sloop=1;
 				break;
 			default:
 				cout << endl << "Please only select 1-4!" << endl;
