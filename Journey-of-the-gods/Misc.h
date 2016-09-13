@@ -64,7 +64,7 @@ void tile()
 			cin >> choice;
 			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
 			cout << endl;
-			/*switch(choice)
+			switch(choice)
 			{
 			case 1:
 				if(weapon[200][200][3]!=0)
@@ -105,7 +105,7 @@ void tile()
 			default:
 				cout << endl << "Please only select 1-4!" << endl;
 				break;
-			}*/
+			}
 		}
 		break;
 	case 8:
