@@ -33,7 +33,7 @@ int gen(int d, int g) //Generates a random number between x and y.
 //MAP FUNCTIONS
 void tile()
 {
-	int sloop=1,choice, cost, tinyloop;
+	int sloop=1,choice, cost, tinyloop, medamnt=0;
 	char yesorno;
 	switch(map[x][y][z])
 	{
@@ -67,32 +67,33 @@ void tile()
 			switch(choice)
 			{
 			case 1:
-				if(weapon[200][200][3]!=0)
+				if(weapon[x][y][z]!=0)
 				{
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
-						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[200][200][3] << " damage, would you like to do it? [Y/N] ";
+						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
 						if(yesorno=='y'||yesorno=='Y'){
-							
+							playerweapon-=weapon[x][y][z]
+							cout << "Your weapon has been upgraded to " << playerweapon << " damage!" << endl;
 						}else if(yesorno=='n'||yesorno=='N'){
-							
+							cout << "You leave the weaponsmith's shop." << endl;
 						}else{
 							cout << endl << "Please only input Y or N!" << endl;
 							tinyloop=1;
 						}
 					
 					}
-				} else {
-					cout << "The weaponsmith cannot upgrade your weapon any further!";
+				}else{
+					cout << "The weaponsmith cannot upgrade your weapon any further!" << endl;;
 				}
 				break;
 			case 2:
 				cost=20;
 				cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] ";
-				cin >> yesorno;
+				cin >> medamnt;
 				break;
 			case 3:
 				cost=armor[x][y][z]*20;
