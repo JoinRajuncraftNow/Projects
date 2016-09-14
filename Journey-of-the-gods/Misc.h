@@ -76,7 +76,7 @@ void tile()
 						tinyloop=0;
 						cin >> yesorno;
 						if(yesorno=='y'||yesorno=='Y'){
-							playerweapon-=weapon[x][y][z]
+							playerweapon-=weapon[x][y][z];
 							cout << "Your weapon has been upgraded to " << playerweapon << " damage!" << endl;
 						}else if(yesorno=='n'||yesorno=='N'){
 							cout << "You leave the weaponsmith's shop." << endl;
