@@ -29,6 +29,44 @@ int MAKE_POS(int s)
 {
     return s > 0 ? s : -s;
 }
+int playerdamagecalc(int d, int rv)
+{
+	if((rv=gen(20,40))+playerweapon>=enemyarmor)
+        {
+        	d=rv-enemyarmor+playerweapon/2;	
+        	switch(raceid)
+        	{
+        	case 1:
+        		return d;
+        		break;
+        	case 2:
+        		d=d*3;
+        		return d/4;
+        		break;
+        	case 3:
+        		return d*2;
+        		break;
+        	case 4:
+        		if(z==2)
+        		{
+        			return d;
+        		}else if(z==1){
+        			return d*2;
+        		}else if(z==0){
+        			return d*3;
+        		}
+        		break;
+        	case 5:
+        		return d/2;
+        		break;
+        	default:
+        		
+        		break;
+        	}
+        }else{
+        	return 0;
+        }
+}
 int enemydamage(int& enemycharging)
 {
 	int rv;
@@ -140,12 +178,7 @@ void combat() //This is where the combat will be.
       case 'q': //quick slash
       case 'Q':
         loop=1;
-        if((rv=gen(20,40))+playerweapon>=enemyarmor)
-        {
-        	damage=rv-enemyarmor+playerweapon/2;	
-        }else{
-        	damage=0;
-        }
+        damage=playerdamagecalc(damage, rv)/2;
         switch(gen(1,2))
         {
         case 1:
@@ -163,12 +196,7 @@ void combat() //This is where the combat will be.
       case 'b': //big slash
       case 'B':
         loop=1;
-        if((rv=gen(30,60))+playerweapon>=enemyarmor)
-        {
-        	damage=rv-enemyarmor+playerweapon;	
-        }else{
-        	damage=0;
-        }
+        damage=playerdamagecalc(damage, rv);
         edamage=enemydamage(enemycharging);
         cout << "You attack the enemy, but he manages to counter!" << endl << "You deal " << damage << " damage!" << endl << "Enemy deals " << edamage << " damage!" << endl;
         ehealth=ehealth-damage;
