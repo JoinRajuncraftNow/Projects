@@ -171,7 +171,7 @@ void combat() //This is where the combat will be.
     {
       cout << "Health: " << health << endl << enemy << " Health: " << ehealth << endl << "Command: ";
       cin >> combatcommand; //Maybe that will work?
-      cin.ignore();
+      //cin.ignore();
       cout << endl;
       switch(combatcommand)
       {
@@ -258,7 +258,7 @@ void combat() //This is where the combat will be.
         {
              cout << "What would you like to loot?" << endl << "1-Armor" << endl << "2-Weapon" << endl << "3-Medkit" << endl;
              cin >> choose;
-             cin.ignore(); //Idk, probably not the problem. Whatevs.
+             //cin.ignore(); //Idk, probably not the problem. Whatevs.
              switch(choose)
              {
              case '1':
