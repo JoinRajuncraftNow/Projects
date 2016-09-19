@@ -91,29 +91,34 @@ int main()
 	int racevar=0;
 	while(racevar==0)
 	{
-		cout << "Hello, " << name << "! What race will you be?" << endl << "==================================================================" << endl << "1 - Human (Medium strength and health. Only slightly better than Orcs at magic.)" << endl << "2 - Elf (Low Strength and Medium Health. Very good at using magic.)" << endl << "3 - Orc (Very high strength and health, but can only manage the simplest of spells.)" << endl << "4 - Dwarf (An ancient miner from a lost race. Not as adept in magic as an Elf, but high attack and defense. You gain a buff over enemies in the caves due to your inherit night vision and keen senses.)" << endl << "5 - Serpentman (Very weak and frail compared to the other races, but their skill in magic is almost godly.)" << endl << "==================================================================" << endl; // got to finish this. 
+		cout << "Hello, " << name << "! What race will you be?" << endl << "==================================================================" << endl << "1 - Human (Medium strength and health. Only slightly better than Orcs at magic.)" << endl << "2 - Elf (Low Strength and Medium Health. Very good at using magic.)" << endl << "3 - Orc (Very high strength and health, but can only manage the simplest of spells.)" << endl << "4 - Dwarf (An ancient miner from a lost race. No skill in magic, for many dwarves deny its existance, but high attack and defense. You gain a buff over enemies in the caves due to your inherit night vision and keen senses.)" << endl << "5 - Serpentman (Very weak and frail compared to the other races, but their skill in magic is almost godly.)" << endl << "==================================================================" << endl; // got to finish this. 
 		cin >> raceid;
 		switch(raceid)
 		{
 		case 1:
 			race="Human"; //I was just testing how much you were paying attention. Totally didn't forget the " or anything.
 			racevar=1;
+			magic=5;
 			break;
 		case 2:
 			race="Elf";
 			racevar=1;
+			magic=8;
 			break;
 		case 3:
 			race="Orc";
 			racevar=1;
+			magic=1;
 			break;
 		case 4:
 			race="Dwarf";
 			racevar=1;
+			magic=0;
 			break;
 		case 5:
 			race="Serpentman";
 			racevar=1;
+			magic=15;
 			break;
 		default:
 			cout << endl << "Unknown race. Please only input 1-5" << endl;  // not valid
