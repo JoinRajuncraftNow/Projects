@@ -16,7 +16,7 @@ extern int enemyid;
 extern int ehealth;
 extern int enemyarmor;
 extern int playerweapon;
-extern int raceid;
+extern char raceid;
 extern string enemy;
 extern int damage;
 extern int map[200][200][3]; //that might just be a LITTLE too big.
