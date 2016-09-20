@@ -16,7 +16,7 @@ extern int enemyid;
 extern int ehealth;
 extern int enemyarmor;
 extern int playerweapon;
-extern int raceid;
+extern char raceid;
 extern int medkit;
 extern string enemy;
 extern int damage;
@@ -36,17 +36,17 @@ int playerdamagecalc(int d, int rv)
         	d=rv-enemyarmor+playerweapon/2;	
         	switch(raceid)
         	{
-        	case 1:
+        	case '1':
         		return d;
         		break;
-        	case 2:
+        	case '2':
         		d=d*3;
         		return d/4;
         		break;
-        	case 3:
+        	case '3':
         		return d*2;
         		break;
-        	case 4:
+        	case '4':
         		if(z==2)
         		{
         			return d;
@@ -56,7 +56,7 @@ int playerdamagecalc(int d, int rv)
         			return d*3;
         		}
         		break;
-        	case 5:
+        	case '5':
         		return d/2;
         		break;
         	default:
