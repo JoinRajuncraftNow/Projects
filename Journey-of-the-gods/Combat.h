@@ -250,7 +250,7 @@ void combat() //This is where the combat will be.
         while(1) { }
       }else if(ehealth<=0){ //THANK YOU!
         cout << enemy << " has been slain!" << endl;
-        g+=gen(10, 25)
+        gold+=gen(10, 25);
         map[x][y][z]-=10;
         enemycharging=1000;
         int cloop=0;
