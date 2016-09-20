@@ -10,13 +10,14 @@ using namespace std; //This might fix it
 #include "Player.h"
 #include "Misc.h"
 int x=0,y=0,z=0;
-int killcount, health=1000, magic=5, playerarmor=0, quest, enemyid, ehealth, enemyarmor, damage, playerweapon=0, raceid, medkit=0, gold=0;
+int killcount, health=1000, magic=5, playerarmor=0, quest, enemyid, ehealth, enemyarmor, damage, playerweapon=0, medkit=0, gold=0;
 int map[200][200][3];
 int visited[200][200][3]; //for quests or how peeps react to you.
 int smedkit[200][200][3]; //for shops
 int armor[200][200][3]; //for shops
 int weapon[200][200][3]; //for shops
 string enemy, questline, name, race, inv; //I hope this works.
+char raceid;
 //Define and add other keys for commands.
 //time_t t = time(0); I think this is time, is it?
 void q() {}
@@ -95,27 +96,27 @@ int main()
 		cin >> raceid;
 		switch(raceid)
 		{
-		case 1:
+		case '1':
 			race="Human"; //I was just testing how much you were paying attention. Totally didn't forget the " or anything.
 			racevar=1;
 			magic=5;
 			break;
-		case 2:
+		case '2':
 			race="Elf";
 			racevar=1;
 			magic=8;
 			break;
-		case 3:
+		case '3':
 			race="Orc";
 			racevar=1;
 			magic=1;
 			break;
-		case 4:
+		case '4':
 			race="Dwarf";
 			racevar=1;
 			magic=0;
 			break;
-		case 5:
+		case '5':
 			race="Serpentman";
 			racevar=1;
 			magic=15;
