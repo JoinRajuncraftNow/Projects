@@ -91,7 +91,7 @@ int enemydamage(int& enemycharging)
     }
     break;
   case 3:
-    rv=gen(15,25);
+    rv=gen(15,20);
     if(rv+enemycharging>playerarmor)
     {
         return rv+enemycharging-playerarmor;
