@@ -1,9 +1,4 @@
 Things to add:
 
 Functions:
-1. Combat
-2. Health subtraction/addition
-3. Inventory addition/subtraction/searching
-4. Race stuff
-5. Other stuff
-6. Make a game
+stuff
