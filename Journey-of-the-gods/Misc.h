@@ -125,7 +125,7 @@ void tile()
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
 					{
-						cout << "You have " << gold << "gold." <, endl;
+						cout << "You have " << gold << "gold." << endl;
 						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
