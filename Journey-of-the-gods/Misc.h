@@ -35,6 +35,7 @@ void tile()
 {
 	int sloop=1,choice, cost, tinyloop, medamnt=0;
 	char yesorno;
+	cout << "---STATS:---" << endl << "Health: " << health << endl << "Magic: " << magic << endl << "Damage: " << playerdamage << endl << "Defence: " << playerarmor << endl << "Gold: " << gold << endl;
 	switch(map[x][y][z])
 	{
 	case 1:
@@ -68,6 +69,7 @@ void tile()
 			case 1:
 				if(weapon[x][y][z]!=0)
 				{
+					tinyloop=0;
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
@@ -119,9 +121,31 @@ void tile()
 				}
 				break;
 			case 3:
+				tinyloop=0;
 				cost=armor[x][y][z]*20;
-				cout << "It will cost you " << cost << " gold coins to upgrade your armor, would you like to do it? [Y/N] ";
-				cin >> yesorno;
+				while(tinyloop==1)
+					{
+						cout << "You have " << gold << "gold." <, endl;
+						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
+							}
+						}else if(yesorno=='n'||yesorno=='N'){
+							cout << "You leave the armorsmith's shop." << endl;
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
 				break;
 			case 4:
 				sloop=0;
