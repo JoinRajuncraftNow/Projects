@@ -108,14 +108,14 @@ void tile()
 					cin >> medamnt;
 					if(medamnt>smedkit[x][y][z])
 					{
-						cout << "Invalid Value!"
+						cout << "Invalid Value!" << endl;
 					}else if(medamnt<1){
 						cout << "You leave the shop." << endl;
 						mloop=0;
 					}else if(cost*medamnt>gold){
 						cout << "You need more gold!" << endl;
 					}else{
-						gold-=medamnt*20
+						gold-=medamnt*20;
 						mloop=0;
 					}
 				}
