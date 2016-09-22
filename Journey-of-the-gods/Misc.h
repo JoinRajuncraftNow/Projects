@@ -33,7 +33,7 @@ int gen(int d, int g) //Generates a random number between x and y.
 //MAP FUNCTIONS
 void tile()
 {
-	int sloop=1,choice, cost, tinyloop, medamnt=0;
+	int sloop=1,choice, cost, tinyloop, medamnt=0, mloop=1;
 	char yesorno;
 	cout << "---STATS:---" << endl << "Health: " << health << endl << "Magic: " << magic << endl << "Damage: " << playerdamage << endl << "Defence: " << playerarmor << endl << "Gold: " << gold << endl << "Location: (" << x << ", " << y << ", " << z << ")" << endl;
 	switch(map[x][y][z])
@@ -99,7 +99,7 @@ void tile()
 				}
 				break;
 			case 2:
-				int mloop=1;
+				mloop=1;
 				while(mloop==1&&smedkit[x][y][z]>1)
 				{
 					cost=20;
