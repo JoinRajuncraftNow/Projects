@@ -35,7 +35,7 @@ void tile()
 {
 	int sloop=1,choice, cost, tinyloop, medamnt=0, mloop=1;
 	char yesorno;
-	cout << "---STATS:---" << endl << "Health: " << health << endl << "Magic: " << magic << endl << "Damage: " << playerdamage << endl << "Defence: " << playerarmor << endl << "Gold: " << gold << endl << "Location: (" << x << ", " << y << ", " << z << ")" << endl;
+	cout << "---STATS:---" << endl << "Health: " << health << endl << "Magic: " << magic << endl << "Damage: " << playerweapon << endl << "Defence: " << playerarmor << endl << "Gold: " << gold << endl << "Location: (" << x << ", " << y << ", " << z << ")" << endl;
 	switch(map[x][y][z])
 	{
 	case 1:
@@ -73,7 +73,7 @@ void tile()
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
-						cout << "You have " << gold << "gold." <, endl;
+						cout << "You have " << gold << "gold." << endl;
 						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
