@@ -59,7 +59,6 @@ void tile()
 		cout << "------TRADING STATION-------" << endl;
 		while(sloop==1)
 		{
-			sloop=0;
 			cout << "You are in a Trading Station! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
 			cin >> choice;
 			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
@@ -72,12 +71,19 @@ void tile()
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
+						cout << "You have " << gold << "gold." <, endl;
 						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
 						if(yesorno=='y'||yesorno=='Y'){
-							playerweapon-=weapon[x][y][z];
-							cout << "Your weapon has been upgraded to " << playerweapon << " damage!" << endl;
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your weapon has been upgraded to " << playerweapon << " damage!" << endl;
+							}
 						}else if(yesorno=='n'||yesorno=='N'){
 							cout << "You leave the weaponsmith's shop." << endl;
 						}else{
@@ -91,9 +97,26 @@ void tile()
 				}
 				break;
 			case 2:
-				cost=20;
-				cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] ";
-				cin >> medamnt;
+				int mloop=1;
+				while(mloop==1&&smedkit[x][y][z]>1)
+				{
+					cost=20;
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
+					cin >> medamnt;
+					if(medamnt>smedkit[x][y][z])
+					{
+						cout << "Invalid Value!"
+					}else if(medamnt<1){
+						cout << "You leave the shop." << endl;
+						mloop=0;
+					}else if(cost*medamnt>gold){
+						cout << "You need more gold!" << endl;
+					}else{
+						gold-=medamnt*20
+						mloop=0;
+					}
+				}
 				break;
 			case 3:
 				cost=armor[x][y][z]*20;
@@ -101,7 +124,7 @@ void tile()
 				cin >> yesorno;
 				break;
 			case 4:
-				sloop=1;
+				sloop=0;
 				break;
 			default:
 				cout << endl << "Please only select 1-4!" << endl;
