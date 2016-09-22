@@ -35,7 +35,7 @@ void tile()
 {
 	int sloop=1,choice, cost, tinyloop, medamnt=0;
 	char yesorno;
-	cout << "---STATS:---" << endl << "Health: " << health << endl << "Magic: " << magic << endl << "Damage: " << playerdamage << endl << "Defence: " << playerarmor << endl << "Gold: " << gold << endl;
+	cout << "---STATS:---" << endl << "Health: " << health << endl << "Magic: " << magic << endl << "Damage: " << playerdamage << endl << "Defence: " << playerarmor << endl << "Gold: " << gold << endl << "Location: (" << x << ", " << y << ", " << z << ")" << endl;
 	switch(map[x][y][z])
 	{
 	case 1:
