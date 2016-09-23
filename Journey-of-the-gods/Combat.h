@@ -60,7 +60,7 @@ int playerdamagecalc(int d, int rv)
         		return d/2;
         		break;
         	default:
-        		
+        		raceid=-1; //lol
         		break;
         	}
         }else{
@@ -241,6 +241,8 @@ void combat() //This is where the combat will be.
         loop=1;
         break;
       default:
+      	cin.clear();
+      	cin.ignore(10000,'\n');
         cout << "Unknown command. Type 'h' for help." << endl;
         break;
       }
@@ -275,6 +277,8 @@ void combat() //This is where the combat will be.
               cloop=1;
         	     break;
              default:
+             	     cin.clear();
+        	     cin.ignore(10000,'\n');
         	     cout << "Please only choose 1-3!" << endl;
         	     break;
           }
