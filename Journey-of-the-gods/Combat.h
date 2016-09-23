@@ -261,7 +261,6 @@ void combat() //This is where the combat will be.
         {
              cout << "What would you like to loot?" << endl << "1-Armor" << endl << "2-Weapon" << endl << "3-Medkit" << endl;
              cin >> choose;
-             //cin.ignore(); //Idk, probably not the problem. Whatevs.
              switch(choose)
              {
              case '1':
