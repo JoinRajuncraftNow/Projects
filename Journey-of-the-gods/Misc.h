@@ -151,6 +151,8 @@ void tile()
 				sloop=0;
 				break;
 			default:
+				cin.clear();
+				cin.ignore(10000,'\n');
 				cout << endl << "Please only select 1-4!" << endl;
 				break;
 			}
