@@ -160,12 +160,309 @@ void tile()
 		break;
 	case 8:
 		cout << "------CITY-------" << endl; //city
+		while(sloop==1)
+		{
+			cout << "You are in a City! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
+			cin >> choice;
+			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
+			cout << endl;
+			switch(choice)
+			{
+			case 1:
+				if(weapon[x][y][z]!=0)
+				{
+					tinyloop=0;
+					cost=weapon[x][y][z]*15;
+					while(tinyloop==1)
+					{
+						cout << "You have " << gold << "gold." << endl;
+						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your weapon has been upgraded to " << playerweapon << " damage!" << endl;
+							}
+						}else if(yesorno=='n'||yesorno=='N'){
+							cout << "You leave the weaponsmith's shop." << endl;
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
+				}else{
+					cout << "The weaponsmith cannot upgrade your weapon any further!" << endl;;
+				}
+				break;
+			case 2:
+				mloop=1;
+				while(mloop==1&&smedkit[x][y][z]>1)
+				{
+					cost=20;
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
+					cin >> medamnt;
+					if(medamnt>smedkit[x][y][z])
+					{
+						cout << "Invalid Value!" << endl;
+					}else if(medamnt<1){
+						cout << "You leave the shop." << endl;
+						mloop=0;
+					}else if(cost*medamnt>gold){
+						cout << "You need more gold!" << endl;
+					}else{
+						gold-=medamnt*20;
+						mloop=0;
+					}
+				}
+				break;
+			case 3:
+				tinyloop=0;
+				cost=armor[x][y][z]*20;
+				while(tinyloop==1)
+					{
+						cout << "You have " << gold << "gold." << endl;
+						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
+							}
+						}else if(yesorno=='n'||yesorno=='N'){
+							cout << "You leave the armorsmith's shop." << endl;
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
+				break;
+			case 4:
+				sloop=0;
+				break;
+			default:
+				cin.clear();
+				cin.ignore(10000,'\n');
+				cout << endl << "Please only select 1-4!" << endl;
+				break;
+			}
+		}
 		break;
 	case 9:
 		cout << "------TOWN-------" << endl; //town
+		while(sloop==1)
+		{
+			cout << "You are in a Town! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
+			cin >> choice;
+			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
+			cout << endl;
+			switch(choice)
+			{
+			case 1:
+				if(weapon[x][y][z]!=0)
+				{
+					tinyloop=0;
+					cost=weapon[x][y][z]*15;
+					while(tinyloop==1)
+					{
+						cout << "You have " << gold << "gold." << endl;
+						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your weapon has been upgraded to " << playerweapon << " damage!" << endl;
+							}
+						}else if(yesorno=='n'||yesorno=='N'){
+							cout << "You leave the weaponsmith's shop." << endl;
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
+				}else{
+					cout << "The weaponsmith cannot upgrade your weapon any further!" << endl;;
+				}
+				break;
+			case 2:
+				mloop=1;
+				while(mloop==1&&smedkit[x][y][z]>1)
+				{
+					cost=20;
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
+					cin >> medamnt;
+					if(medamnt>smedkit[x][y][z])
+					{
+						cout << "Invalid Value!" << endl;
+					}else if(medamnt<1){
+						cout << "You leave the shop." << endl;
+						mloop=0;
+					}else if(cost*medamnt>gold){
+						cout << "You need more gold!" << endl;
+					}else{
+						gold-=medamnt*20;
+						mloop=0;
+					}
+				}
+				break;
+			case 3:
+				tinyloop=0;
+				cost=armor[x][y][z]*20;
+				while(tinyloop==1)
+					{
+						cout << "You have " << gold << "gold." << endl;
+						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
+							}
+						}else if(yesorno=='n'||yesorno=='N'){
+							cout << "You leave the armorsmith's shop." << endl;
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
+				break;
+			case 4:
+				sloop=0;
+				break;
+			default:
+				cin.clear();
+				cin.ignore(10000,'\n');
+				cout << endl << "Please only select 1-4!" << endl;
+				break;
+			}
+		}
 		break;
 	case 10:
 		cout << "------SETTLEMENT-------" << endl; //settlement
+		while(sloop==1)
+		{
+			cout << "Settlement! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
+			cin >> choice;
+			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
+			cout << endl;
+			switch(choice)
+			{
+			case 1:
+				if(weapon[x][y][z]!=0)
+				{
+					tinyloop=0;
+					cost=weapon[x][y][z]*15;
+					while(tinyloop==1)
+					{
+						cout << "You have " << gold << "gold." << endl;
+						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your weapon has been upgraded to " << playerweapon << " damage!" << endl;
+							}
+						}else if(yesorno=='n'||yesorno=='N'){
+							cout << "You leave the weaponsmith's shop." << endl;
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
+				}else{
+					cout << "The weaponsmith cannot upgrade your weapon any further!" << endl;;
+				}
+				break;
+			case 2:
+				mloop=1;
+				while(mloop==1&&smedkit[x][y][z]>1)
+				{
+					cost=20;
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
+					cin >> medamnt;
+					if(medamnt>smedkit[x][y][z])
+					{
+						cout << "Invalid Value!" << endl;
+					}else if(medamnt<1){
+						cout << "You leave the shop." << endl;
+						mloop=0;
+					}else if(cost*medamnt>gold){
+						cout << "You need more gold!" << endl;
+					}else{
+						gold-=medamnt*20;
+						mloop=0;
+					}
+				}
+				break;
+			case 3:
+				tinyloop=0;
+				cost=armor[x][y][z]*20;
+				while(tinyloop==1)
+					{
+						cout << "You have " << gold << "gold." << endl;
+						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+						tinyloop=0;
+						cin >> yesorno;
+						if(yesorno=='y'||yesorno=='Y'){
+							if(gold<cost)
+							{
+								cout << "You need more gold!" << endl;
+							}else{
+								gold-=cost;
+								playerweapon+=weapon[x][y][z];
+								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
+							}
+						}else if(yesorno=='n'||yesorno=='N'){
+							cout << "You leave the armorsmith's shop." << endl;
+						}else{
+							cout << endl << "Please only input Y or N!" << endl;
+							tinyloop=1;
+						}
+					
+					}
+				break;
+			case 4:
+				sloop=0;
+				break;
+			default:
+				cin.clear();
+				cin.ignore(10000,'\n');
+				cout << endl << "Please only select 1-4!" << endl;
+				break;
+			}
+		}
 		break;
 	case 11:
 		cout << "------FOREST------" << endl; //forest
