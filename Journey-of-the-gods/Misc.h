@@ -69,7 +69,7 @@ void tile()
 			case 1:
 				if(weapon[x][y][z]!=0)
 				{
-					tinyloop=0;
+					tinyloop=1;
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
@@ -115,37 +115,38 @@ void tile()
 					}else if(cost*medamnt>gold){
 						cout << "You need more gold!" << endl;
 					}else{
+						cout << "You bought " << medamnt << " medkits!" << endl;
 						gold-=medamnt*20;
 						mloop=0;
 					}
 				}
 				break;
 			case 3:
-				tinyloop=0;
+				tinyloop=1;
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
-					{
-						cout << "You have " << gold << "gold." << endl;
-						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
-						tinyloop=0;
-						cin >> yesorno;
-						if(yesorno=='y'||yesorno=='Y'){
-							if(gold<cost)
-							{
-								cout << "You need more gold!" << endl;
-							}else{
-								gold-=cost;
-								playerweapon+=weapon[x][y][z];
-								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
-							}
-						}else if(yesorno=='n'||yesorno=='N'){
-							cout << "You leave the armorsmith's shop." << endl;
+				{
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+					tinyloop=0;
+					cin >> yesorno;
+					if(yesorno=='y'||yesorno=='Y'){
+						if(gold<cost)
+						{
+							cout << "You need more gold!" << endl;
 						}else{
-							cout << endl << "Please only input Y or N!" << endl;
-							tinyloop=1;
+							gold-=cost;
+							playerweapon+=weapon[x][y][z];
+							cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
 						}
-					
+					}else if(yesorno=='n'||yesorno=='N'){
+						cout << "You leave the armorsmith's shop." << endl;
+					}else{
+						cout << endl << "Please only input Y or N!" << endl;
+						tinyloop=1;
 					}
+				
+				}
 				break;
 			case 4:
 				sloop=0;
@@ -171,7 +172,7 @@ void tile()
 			case 1:
 				if(weapon[x][y][z]!=0)
 				{
-					tinyloop=0;
+					tinyloop=1;
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
@@ -217,37 +218,38 @@ void tile()
 					}else if(cost*medamnt>gold){
 						cout << "You need more gold!" << endl;
 					}else{
+						cout << "You bought " << medamnt << " medkits!" << endl;
 						gold-=medamnt*20;
 						mloop=0;
 					}
 				}
 				break;
 			case 3:
-				tinyloop=0;
+				tinyloop=1;
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
-					{
-						cout << "You have " << gold << "gold." << endl;
-						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
-						tinyloop=0;
-						cin >> yesorno;
-						if(yesorno=='y'||yesorno=='Y'){
-							if(gold<cost)
-							{
-								cout << "You need more gold!" << endl;
-							}else{
-								gold-=cost;
-								playerweapon+=weapon[x][y][z];
-								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
-							}
-						}else if(yesorno=='n'||yesorno=='N'){
-							cout << "You leave the armorsmith's shop." << endl;
+				{
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+					tinyloop=0;
+					cin >> yesorno;
+					if(yesorno=='y'||yesorno=='Y'){
+						if(gold<cost)
+						{
+							cout << "You need more gold!" << endl;
 						}else{
-							cout << endl << "Please only input Y or N!" << endl;
-							tinyloop=1;
+							gold-=cost;
+							playerweapon+=weapon[x][y][z];
+							cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
 						}
-					
+					}else if(yesorno=='n'||yesorno=='N'){
+						cout << "You leave the armorsmith's shop." << endl;
+					}else{
+						cout << endl << "Please only input Y or N!" << endl;
+						tinyloop=1;
 					}
+				
+				}
 				break;
 			case 4:
 				sloop=0;
@@ -273,7 +275,7 @@ void tile()
 			case 1:
 				if(weapon[x][y][z]!=0)
 				{
-					tinyloop=0;
+					tinyloop=1;
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
@@ -319,37 +321,38 @@ void tile()
 					}else if(cost*medamnt>gold){
 						cout << "You need more gold!" << endl;
 					}else{
+						cout << "You bought " << medamnt << " medkits!" << endl;
 						gold-=medamnt*20;
 						mloop=0;
 					}
 				}
 				break;
 			case 3:
-				tinyloop=0;
+				tinyloop=1;
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
-					{
-						cout << "You have " << gold << "gold." << endl;
-						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
-						tinyloop=0;
-						cin >> yesorno;
-						if(yesorno=='y'||yesorno=='Y'){
-							if(gold<cost)
-							{
-								cout << "You need more gold!" << endl;
-							}else{
-								gold-=cost;
-								playerweapon+=weapon[x][y][z];
-								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
-							}
-						}else if(yesorno=='n'||yesorno=='N'){
-							cout << "You leave the armorsmith's shop." << endl;
+				{
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+					tinyloop=0;
+					cin >> yesorno;
+					if(yesorno=='y'||yesorno=='Y'){
+						if(gold<cost)
+						{
+							cout << "You need more gold!" << endl;
 						}else{
-							cout << endl << "Please only input Y or N!" << endl;
-							tinyloop=1;
+							gold-=cost;
+							playerweapon+=weapon[x][y][z];
+							cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
 						}
-					
+					}else if(yesorno=='n'||yesorno=='N'){
+						cout << "You leave the armorsmith's shop." << endl;
+					}else{
+						cout << endl << "Please only input Y or N!" << endl;
+						tinyloop=1;
 					}
+				
+				}
 				break;
 			case 4:
 				sloop=0;
@@ -366,7 +369,7 @@ void tile()
 		cout << "------SETTLEMENT-------" << endl; //settlement
 		while(sloop==1)
 		{
-			cout << "Settlement! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
+			cout << "You are in a Settlement! You may [1-Talk to the Weaponsmith/2-Talk to the Healer/3-Talk to the Armorer/4-Leave] "; //trading station
 			cin >> choice;
 			cin.ignore(); //Seems to stop some of the bugs. Maybe just with cin.get, though.
 			cout << endl;
@@ -375,7 +378,7 @@ void tile()
 			case 1:
 				if(weapon[x][y][z]!=0)
 				{
-					tinyloop=0;
+					tinyloop=1;
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
@@ -421,37 +424,38 @@ void tile()
 					}else if(cost*medamnt>gold){
 						cout << "You need more gold!" << endl;
 					}else{
+						cout << "You bought " << medamnt << " medkits!" << endl;
 						gold-=medamnt*20;
 						mloop=0;
 					}
 				}
 				break;
 			case 3:
-				tinyloop=0;
+				tinyloop=1;
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
-					{
-						cout << "You have " << gold << "gold." << endl;
-						cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
-						tinyloop=0;
-						cin >> yesorno;
-						if(yesorno=='y'||yesorno=='Y'){
-							if(gold<cost)
-							{
-								cout << "You need more gold!" << endl;
-							}else{
-								gold-=cost;
-								playerweapon+=weapon[x][y][z];
-								cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
-							}
-						}else if(yesorno=='n'||yesorno=='N'){
-							cout << "You leave the armorsmith's shop." << endl;
+				{
+					cout << "You have " << gold << "gold." << endl;
+					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
+					tinyloop=0;
+					cin >> yesorno;
+					if(yesorno=='y'||yesorno=='Y'){
+						if(gold<cost)
+						{
+							cout << "You need more gold!" << endl;
 						}else{
-							cout << endl << "Please only input Y or N!" << endl;
-							tinyloop=1;
+							gold-=cost;
+							playerweapon+=weapon[x][y][z];
+							cout << "Your armor has been upgraded to " << playerarmor << " defence!" << endl;
 						}
-					
+					}else if(yesorno=='n'||yesorno=='N'){
+						cout << "You leave the armorsmith's shop." << endl;
+					}else{
+						cout << endl << "Please only input Y or N!" << endl;
+						tinyloop=1;
 					}
+				
+				}
 				break;
 			case 4:
 				sloop=0;
