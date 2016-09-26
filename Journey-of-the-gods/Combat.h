@@ -130,7 +130,7 @@ int enemydamage(int& enemycharging)
 }
 void combat() //This is where the combat will be.
 {
-  int edamage=0; //nvm
+  int edamage=0, helping; //nvm
   char combatcommand, counter;
   int rv;
   enemyid=gen(1, 5);
@@ -169,6 +169,7 @@ void combat() //This is where the combat will be.
     loop=0;
     while(loop!=1)
     {
+	helping=1;
       cout << "Health: " << health << endl << enemy << " Health: " << ehealth << endl << "Command: ";
       cin >> combatcommand; //Maybe that will work?
       //cin.ignore();
@@ -234,6 +235,7 @@ void combat() //This is where the combat will be.
       case 'h': //help
       case 'H':
         loop=1;
+	helping=1;
         cout << "---COMMANDS---" << endl << "H-Command List" << endl << "Q-Quick Slash" << endl << "B-Big Slash" << endl <<  "D-Dodge" << endl << "M-Medkit" << endl << "S-Spell" << endl << "----------------" << endl;
         break;
       case 's': //spell
@@ -284,12 +286,12 @@ void combat() //This is where the combat will be.
         }
       }
     }
-    if(enemycharging==0)
+    if(enemycharging==0&&helping==1)
     {
         enemycharging=gen(0,5);
         cout << "The enemy is preparing to attack!" << endl;
     }else{
-        if(enemycharging<200)
+        if(enemycharging<200&&helping==1)
 	{
             enemycharging=enemycharging*2;
         }
