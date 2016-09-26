@@ -73,7 +73,7 @@ void tile()
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
-						cout << "You have " << gold << "gold." << endl;
+						cout << "You have " << gold << " gold." << endl;
 						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
@@ -103,7 +103,7 @@ void tile()
 				while(mloop==1&&smedkit[x][y][z]>1)
 				{
 					cost=20;
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
 					cin >> medamnt;
 					if(medamnt>smedkit[x][y][z])
@@ -126,7 +126,7 @@ void tile()
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
 				{
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
 					tinyloop=0;
 					cin >> yesorno;
@@ -176,7 +176,7 @@ void tile()
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
-						cout << "You have " << gold << "gold." << endl;
+						cout << "You have " << gold << " gold." << endl;
 						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
@@ -206,7 +206,7 @@ void tile()
 				while(mloop==1&&smedkit[x][y][z]>1)
 				{
 					cost=20;
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
 					cin >> medamnt;
 					if(medamnt>smedkit[x][y][z])
@@ -229,7 +229,7 @@ void tile()
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
 				{
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
 					tinyloop=0;
 					cin >> yesorno;
@@ -279,7 +279,7 @@ void tile()
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
-						cout << "You have " << gold << "gold." << endl;
+						cout << "You have " << gold << " gold." << endl;
 						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
@@ -309,7 +309,7 @@ void tile()
 				while(mloop==1&&smedkit[x][y][z]>1)
 				{
 					cost=20;
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
 					cin >> medamnt;
 					if(medamnt>smedkit[x][y][z])
@@ -332,7 +332,7 @@ void tile()
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
 				{
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
 					tinyloop=0;
 					cin >> yesorno;
@@ -382,7 +382,7 @@ void tile()
 					cost=weapon[x][y][z]*15;
 					while(tinyloop==1)
 					{
-						cout << "You have " << gold << "gold." << endl;
+						cout << "You have " << gold << " gold." << endl;
 						cout << "It will cost you " << cost << " gold coins to upgrade your weapon by " << weapon[x][y][z] << " damage, would you like to do it? [Y/N] ";
 						tinyloop=0;
 						cin >> yesorno;
@@ -412,7 +412,7 @@ void tile()
 				while(mloop==1&&smedkit[x][y][z]>1)
 				{
 					cost=20;
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you 20 gold coins per medkit, how many would you like to buy? [1-" << smedkit[x][y][z] << "] Type a number less than 1 to leave.";
 					cin >> medamnt;
 					if(medamnt>smedkit[x][y][z])
@@ -435,7 +435,7 @@ void tile()
 				cost=armor[x][y][z]*20;
 				while(tinyloop==1)
 				{
-					cout << "You have " << gold << "gold." << endl;
+					cout << "You have " << gold << " gold." << endl;
 					cout << "It will cost you " << cost << " gold coins to upgrade your armor by " << armor[x][y][z] << " defence, would you like to do it? [Y/N] ";
 					tinyloop=0;
 					cin >> yesorno;
