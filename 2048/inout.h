@@ -40,3 +40,16 @@ void command()
 		break;
 	}
 }
+void boardout(int board[4][4])
+{
+	int x=0,y=0;
+	while(y<4)
+	{
+		while(x<4)
+		{	
+			cout << board[x][y];
+		}
+		y++;
+		x=0;
+	}
+}
