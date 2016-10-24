@@ -3,6 +3,8 @@
 #include <cstdlib>
 #include <ctime>
 #include "conio.h"
+#include "inout.h"
+#include "math.h"
 using namespace std;
 int gen(int d, int g) //Generates a random number between x and y.
 {
