@@ -6,5 +6,5 @@
 using namespace std;
 int main()
 {
-	
+	int board[4][4];
 }
