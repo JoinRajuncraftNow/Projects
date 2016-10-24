@@ -1,3 +1,19 @@
+void up()
+{
+	
+}
+void down()
+{
+	
+}
+void left()
+{
+	
+}
+void right()
+{
+	
+}
 void command()
 {
 	char c;
