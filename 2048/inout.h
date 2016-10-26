@@ -1,4 +1,5 @@
 using namespace std;
+extern int board[4][4];
 void up()
 {
 	
@@ -41,7 +42,7 @@ void command()
 		break;
 	}
 }
-void boardout(int board[4][4])
+void boardout()
 {
 	int x=0,y=0;
 	while(y<4)
