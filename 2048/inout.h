@@ -49,6 +49,7 @@ void boardout(int board[4][4])
 		{	
 			cout << board[x][y];
 		}
+		cout << endl;
 		y++;
 		x=0;
 	}
