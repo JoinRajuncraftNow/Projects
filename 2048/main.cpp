@@ -5,6 +5,7 @@
 #include "conio.h"
 #include "inout.h"
 #include "math.h"
+int board[4][4];
 using namespace std;
 int gen(int d, int g) //Generates a random number between x and y.
 {
@@ -12,7 +13,6 @@ int gen(int d, int g) //Generates a random number between x and y.
 }
 int main()
 {
-	int board[4][4];
 	int x=0,y=0;
 	//BOARD GENERATION
 	while(y<4)
@@ -33,5 +33,9 @@ int main()
 		}
 		y++;
 		x=0;
+	}
+	while(1)
+	{
+		boardout()
 	}
 }
