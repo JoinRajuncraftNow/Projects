@@ -7,6 +7,10 @@
 #include "math.h"
 int board[4][4];
 using namespace std;
+int gen(int d, int g) //Generates a random number between x and y.
+{
+	return rand()%(g-d+1)+d;
+}
 void newtile()
 {
 	int x=gen(0,3);
@@ -17,10 +21,6 @@ void newtile()
 	}else{
 		board[x][y]=2;
 	}
-}
-int gen(int d, int g) //Generates a random number between x and y.
-{
-	return rand()%(g-d+1)+d;
 }
 int main()
 {
