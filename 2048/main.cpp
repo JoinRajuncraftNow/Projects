@@ -2,6 +2,7 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
+#include "windows.h"
 #include "conio.h"
 #include "inout.h"
 #include "math.h"
