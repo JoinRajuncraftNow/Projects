@@ -15,11 +15,38 @@ void newtile()
 {
 	int x=gen(0,3);
 	int y=gen(0,3);
-	if(gen(1,3)==1) //1\3 chance of 4
+	if(board[x][y]==0)
 	{
-		board[x][y]=4;
+		if(gen(1,3)==1) //1\3 chance of 4
+		{
+			board[x][y]=4;
+		}else{
+			board[x][y]=2;
+		}
 	}else{
-		board[x][y]=2;
+		int zero=0;
+		x=0;
+		y=0;
+		while(y<4)
+		{
+			while(x<4)
+			{	
+				if(board[x][y]==0)
+				{
+					if(gen(1,3)==1) //1\3 chance of 4
+					{
+						board[x][y]=4;
+					}else{
+						board[x][y]=2;
+					}
+					return;
+				}
+				x++;
+			}
+			y++;
+			x=0;
+		}
+		while(1){}
 	}
 }
 int main()
@@ -42,6 +69,5 @@ int main()
 		newtile();
 		boardout();
 		command();
-		return 0;
 	}
 }
