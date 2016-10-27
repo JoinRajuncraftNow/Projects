@@ -1,8 +1,38 @@
 using namespace std;
 extern int board[4][4];
+void clear() {
+    COORD topLeft  = { 0, 0 };
+    HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_SCREEN_BUFFER_INFO screen;
+    DWORD written;
+
+    GetConsoleScreenBufferInfo(console, &screen);
+    FillConsoleOutputCharacterA(
+        console, ' ', screen.dwSize.X * screen.dwSize.Y, topLeft, &written
+    );
+    FillConsoleOutputAttribute(
+        console, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE,
+        screen.dwSize.X * screen.dwSize.Y, topLeft, &written
+    );
+    SetConsoleCursorPosition(console, topLeft);
+}
 void up()
 {
-	
+	int x=0,y=0,loop;
+	while(y<4)
+	{
+		while(x<4)
+		{	
+			if(board[x][y]==0)
+			{
+				loop=0;
+			}
+			x++;
+		}
+		cout << endl;
+		y++;
+		x=0;
+	}
 }
 void down()
 {
@@ -44,12 +74,14 @@ void command()
 }
 void boardout()
 {
+	clear();
 	int x=0,y=0;
 	while(y<4)
 	{
 		while(x<4)
 		{	
 			cout << board[x][y];
+			x++;
 		}
 		cout << endl;
 		y++;
