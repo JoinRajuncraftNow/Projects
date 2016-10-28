@@ -55,20 +55,13 @@ int main()
 	srand(time(NULL));
 	int x=0,y=0;
 	//BOARD GENERATION
-	while(y<4)
-	{
-		while(x<4)
-		{	
-			board[x][y]=0;
-			x++;
-		}
-		y++;
-		x=0;
-	}
+	newtile();
+	newtile();
+	boardout();
 	while(1)
 	{
+		command();
 		newtile();
 		boardout();
-		command();
 	}
 }
