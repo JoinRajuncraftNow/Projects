@@ -19,9 +19,9 @@ void clear() {
 void up()
 {
 	int x=0,y=0,loop=0, yy=0;
-	while(y<4)
+	while(x<4)
 	{
-		while(x<4)
+		while(y<4)
 		{	
 			if(board[x][y]!=0)
 			{
@@ -38,19 +38,19 @@ void up()
 					yy--;
 				}
 			}
-			x++;
+			y++;
 		}
 		cout << endl;
-		y++;
-		x=0;
+		x++;
+		y=0;
 	}
 }
 void down()
 {
-	int x=0,y=0,loop=0, yy=0;
-	while(y<4)
+	int x=0,y=3,loop=0, yy=0;
+	while(x<4)
 	{
-		while(x<4)
+		while(y>-1)
 		{	
 			if(board[x][y]!=0)
 			{
@@ -67,19 +67,19 @@ void down()
 					yy++;
 				}
 			}
-			x++;
+			y--;
 		}
 		cout << endl;
-		y++;
-		x=0;
+		x++;
+		y=3;
 	}
 }
 void left()
 {
 	int x=0,y=0,loop=0, xx=0;
-	while(x<4)
+	while(y<4)
 	{
-		while(y<4)
+		while(x<4)
 		{	
 			if(board[x][y]!=0)
 			{
@@ -96,19 +96,19 @@ void left()
 					xx--;
 				}
 			}
-			y++;
+			x++;
 		}
 		cout << endl;
-		x++;
-		y=0;
+		y++;
+		x=0;
 	}
 }
 void right()
 {
-	int x=0,y=0,loop=0, xx=0;
+	int x=3,y=0,loop=0, xx=0;
 	while(y<4)
 	{
-		while(x<4)
+		while(x>-1)
 		{	
 			if(board[x][y]!=0)
 			{
@@ -125,11 +125,11 @@ void right()
 					xx++;
 				}
 			}
-			x++;
+			x--;
 		}
 		cout << endl;
 		y++;
-		x=0;
+		x=3;
 	}
 }
 void command()
@@ -145,17 +145,15 @@ void command()
 	case 's':
 	case 'S':
 		down();   // key down (S)
-		down();
+		down();  
 		break;
 	case 'a':
 	case 'A':
 		left();  // key left (A)
-		left();
 		break;
 	case 'd':
 	case 'D':
 		right();  // key right (D)
-		right(); dwd
 		break;
 	default:
 		cout << endl << "Unknown Command." << endl;  // not valid
