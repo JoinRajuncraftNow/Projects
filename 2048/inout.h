@@ -32,6 +32,9 @@ void up()
 					{
 						board[x][yy-1]=board[x][yy];
 						board[x][yy]=0;
+					}else if(board[x][yy-1]==board[x][yy]){
+						board[x][yy-1]=board[x][yy]*2;
+						board[x][yy]=0;
 					}else{
 						break;
 					}
@@ -60,6 +63,9 @@ void down()
 					if(board[x][yy+1]==0&&yy!=3)
 					{
 						board[x][yy+1]=board[x][yy];
+						board[x][yy]=0;
+					}else if(board[x][yy+1]==board[x][yy]){
+						board[x][yy+1]=board[x][yy]*2;
 						board[x][yy]=0;
 					}else{
 						break;
@@ -90,6 +96,9 @@ void left()
 					{
 						board[xx-1][y]=board[xx][y];
 						board[xx][y]=0;
+					}else if(board[xx-1][y]==board[xx][y]){
+						board[xx-1][y]=board[xx][y]*2;
+						board[xx][y]=0;
 					}else{
 						break;
 					}
@@ -118,6 +127,9 @@ void right()
 					if(board[xx+1][y]==0&&xx!=3)
 					{
 						board[xx+1][y]=board[xx][y];
+						board[xx][y]=0;
+					}else if(board[xx+1][y]==board[xx][y]){
+						board[xx+1][y]=board[xx][y]*2;
 						board[xx][y]=0;
 					}else{
 						break;
@@ -163,15 +175,29 @@ void command()
 void boardout()
 {
 	clear();
-	int x=0,y=0;
+	int x=0,y=0, divide;
 	while(y<4)
 	{
 		while(x<4)
 		{	
-			cout << board[x][y];
+			divide=board[x][y]/10;
+			if(divide < 10)
+			{
+				cout << "   " << board[x][y] << "   ";
+			}else if(divide > 10){
+				cout << "   " << board[x][y] << "  ";
+			}else if(divide > 100){
+				cout << "  " << board[x][y] << "  ";
+			}else if(divide > 1000){
+				cout << "  " << board[x][y] << " ";
+			}else if(divide > 10000){
+				cout << "  " << board[x][y] << "  ";
+			}else if(divide > 100000){
+				cout << " " << board[x][y] << " ";
+			}
 			x++;
 		}
-		cout << endl;
+		cout << endl << endl;
 		y++;
 		x=0;
 	}
