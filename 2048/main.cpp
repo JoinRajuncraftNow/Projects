@@ -54,6 +54,17 @@ int main()
 {
 	srand(time(NULL));
 	int x=0,y=0;
+	int x_=0,y_=0;
+	while(x_<4)
+	{
+		y_=0;
+		while(y_<4)
+		{
+			board[x][y]=0;
+			y_++;
+		}
+		x_++;
+	}
 	//BOARD GENERATION
 	newtile();
 	newtile();
